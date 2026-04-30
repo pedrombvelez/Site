@@ -19,12 +19,20 @@ export const metadata: Metadata = {
   title: "Para a mamã do Pedrinho",
   description:
     "Um livro pequenino, feito com muito amor, para a mamã mais especial do mundo. Feliz Dia da Mãe.",
-  openGraph: {
-    title: "Para a mamã do Pedrinho",
-    description: "Um livro pequenino, feito com muito amor.",
-    type: "website",
-    locale: "pt_PT",
+  // Site privado — pedimos a motores de busca para não indexarem nem seguirem
+  // links. Combinado com /robots.txt e o gate de palavra-passe.
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+    },
   },
+  // Sem OpenGraph: evita pré-visualizações com a foto/título quando o link
+  // for partilhado (WhatsApp, iMessage, etc.).
 };
 
 export default function RootLayout({
