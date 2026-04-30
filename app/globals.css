@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #fdf6ee;
+  --peach: #fce7e0;
+  --rose: #f5c5b8;
+  --terracotta: #d49380;
+  --terracotta-deep: #b4715e;
+  --sage: #a8b89c;
+  --ink: #4a3a32;
+  --ink-soft: #6a564a;
+  --gold: #c9a36a;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-peach: var(--peach);
+  --color-rose: var(--rose);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-deep: var(--terracotta-deep);
+  --color-sage: var(--sage);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-gold: var(--gold);
+  --font-serif: var(--font-cormorant);
+  --font-handwritten: var(--font-caveat);
+}
+
+html,
+body {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(252, 231, 224, 0.6), transparent 60%),
+    radial-gradient(ellipse at 85% 80%, rgba(168, 184, 156, 0.25), transparent 55%),
+    radial-gradient(ellipse at 50% 50%, rgba(253, 246, 238, 1), rgba(252, 231, 224, 0.4));
+}
+
+.font-handwritten {
+  font-family: var(--font-caveat), "Comic Sans MS", cursive;
+}
+
+.font-serif {
+  font-family: var(--font-cormorant), Georgia, "Times New Roman", serif;
+}
+
+/* Aguarela paper texture overlay (subtle) */
+.paper {
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(circle at 25% 15%, rgba(212, 147, 128, 0.08) 0, transparent 35%),
+    radial-gradient(circle at 75% 85%, rgba(168, 184, 156, 0.10) 0, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(252, 231, 224, 0.4) 0, transparent 60%);
+}
+
+/* Pulse halo for hotspots */
+@keyframes hotspot-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(212, 147, 128, 0.55);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(212, 147, 128, 0);
+    transform: scale(1.06);
+  }
+}
+
+.hotspot-pulse {
+  animation: hotspot-pulse 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hotspot-pulse {
+    animation: none;
+  }
+}
+
+/* Gentle floating petals on the cover */
+@keyframes drift {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.6; }
+  100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+}
+
+.petal {
+  animation: drift linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal {
+    display: none;
+  }
+}
