@@ -1,34 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <filter id="b5" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="75" />
-    </filter>
-    <radialGradient id="festive" cx="50%" cy="50%" r="70%">
-      <stop offset="0%" stop-color="#fff3e0" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#fdf6ee" stop-opacity="0.4" />
+    <filter id="b5h" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55" /></filter>
+    <filter id="b5m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="16" /></filter>
+    <filter id="b5l" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5" /></filter>
+    <radialGradient id="festive5" cx="50%" cy="55%" r="75%">
+      <stop offset="0%" stop-color="#fff6e8" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#fdf6ee" stop-opacity="0.45" />
     </radialGradient>
   </defs>
   <rect width="1600" height="1100" fill="#fdf6ee" />
-  <rect width="1600" height="1100" fill="url(#festive)" />
-  <!-- sage/green washes (festive but not red) -->
-  <ellipse cx="280" cy="360" rx="420" ry="320" fill="#a8b89c" filter="url(#b5)" opacity="0.5" />
-  <ellipse cx="1380" cy="700" rx="440" ry="340" fill="#a8b89c" filter="url(#b5)" opacity="0.4" />
-  <!-- pine tree silhouette very faded -->
-  <g filter="url(#b5)" opacity="0.35">
-    <polygon points="800,250 700,500 760,500 680,700 820,700 740,900 920,900 840,700 980,700 900,500 960,500 840,250" fill="#6a8076" />
+  <rect width="1600" height="1100" fill="url(#festive5)" />
+  <!-- sage washes (festive green) -->
+  <ellipse cx="300" cy="380" rx="380" ry="280" fill="#a8b89c" opacity="0.4" filter="url(#b5h)" />
+  <ellipse cx="1380" cy="700" rx="420" ry="320" fill="#a8b89c" opacity="0.35" filter="url(#b5h)" />
+  <!-- pine tree silhouette (visible) -->
+  <g filter="url(#b5m)" opacity="0.5">
+    <polygon points="800,260 720,470 770,470 700,650 830,650 750,840 940,840 870,650 1000,650 930,470 980,470 870,260" fill="#6a8076" />
   </g>
-  <!-- gold star above tree -->
-  <g filter="url(#b5)" opacity="0.7">
-    <circle cx="800" cy="200" r="50" fill="#c9a36a" />
+  <!-- star on top + halo -->
+  <circle cx="800" cy="240" r="80" fill="#c9a36a" opacity="0.3" filter="url(#b5h)" />
+  <g filter="url(#b5l)">
+    <polygon points="800,180 815,225 860,225 825,255 838,300 800,275 762,300 775,255 740,225 785,225" fill="#c9a36a" opacity="0.85" />
   </g>
-  <!-- gold ornaments scattered -->
-  <g fill="#c9a36a">
-    <circle cx="280" cy="780" r="8" opacity="0.6" />
-    <circle cx="450" cy="900" r="6" opacity="0.5" />
-    <circle cx="1180" cy="220" r="7" opacity="0.55" />
-    <circle cx="1320" cy="320" r="6" opacity="0.5" />
-    <circle cx="1100" cy="950" r="9" opacity="0.65" />
+  <!-- ornaments on tree (gold + rose) -->
+  <g filter="url(#b5l)">
+    <circle cx="780" cy="500" r="11" fill="#c9a36a" opacity="0.85" />
+    <circle cx="850" cy="600" r="10" fill="#d49380" opacity="0.8" />
+    <circle cx="730" cy="700" r="11" fill="#c9a36a" opacity="0.8" />
+    <circle cx="900" cy="780" r="10" fill="#d49380" opacity="0.75" />
+    <circle cx="800" cy="430" r="9" fill="#d49380" opacity="0.85" />
   </g>
-  <!-- warm blush wash -->
-  <ellipse cx="800" cy="1050" rx="1000" ry="180" fill="#f5c5b8" filter="url(#b5)" opacity="0.35" />
+  <!-- floor blush -->
+  <ellipse cx="800" cy="1050" rx="1000" ry="180" fill="#f5c5b8" opacity="0.35" filter="url(#b5h)" />
+  <!-- distant gold sparkles like fairy lights -->
+  <g fill="#c9a36a" filter="url(#b5l)">
+    <circle cx="280" cy="850" r="6" opacity="0.6" />
+    <circle cx="1300" cy="280" r="5" opacity="0.55" />
+    <circle cx="180" cy="600" r="5" opacity="0.5" />
+    <circle cx="1450" cy="900" r="6" opacity="0.55" />
+    <circle cx="500" cy="200" r="5" opacity="0.5" />
+  </g>
 </svg>

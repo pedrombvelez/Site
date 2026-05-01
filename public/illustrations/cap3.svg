@@ -1,25 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <filter id="b3" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="80" />
-    </filter>
-    <linearGradient id="sunrise" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fff3e0" stop-opacity="1" />
-      <stop offset="50%" stop-color="#fce7e0" stop-opacity="0.6" />
-      <stop offset="100%" stop-color="#f5c5b8" stop-opacity="0.3" />
+    <filter id="b3h" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55" /></filter>
+    <filter id="b3m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="20" /></filter>
+    <filter id="b3l" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6" /></filter>
+    <linearGradient id="rise" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff6e8" stop-opacity="1" />
+      <stop offset="40%" stop-color="#fce7e0" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#f5c5b8" stop-opacity="0.5" />
     </linearGradient>
   </defs>
   <rect width="1600" height="1100" fill="#fdf6ee" />
-  <rect width="1600" height="1100" fill="url(#sunrise)" />
-  <!-- big rising sun -->
-  <ellipse cx="800" cy="700" rx="780" ry="380" fill="#fff3e0" filter="url(#b3)" opacity="0.85" />
-  <ellipse cx="800" cy="720" rx="380" ry="260" fill="#c9a36a" filter="url(#b3)" opacity="0.45" />
-  <!-- soft horizon glow -->
-  <ellipse cx="800" cy="720" rx="220" ry="160" fill="#fff3e0" filter="url(#b3)" opacity="0.85" />
-  <!-- wing edges -->
-  <ellipse cx="180" cy="500" rx="280" ry="220" fill="#fce7e0" filter="url(#b3)" opacity="0.6" />
-  <ellipse cx="1450" cy="450" rx="280" ry="220" fill="#f5c5b8" filter="url(#b3)" opacity="0.45" />
-  <!-- single morning star -->
-  <circle cx="1200" cy="200" r="10" fill="#c9a36a" opacity="0.9" />
-  <circle cx="1200" cy="200" r="20" fill="#c9a36a" opacity="0.3" />
+  <rect width="1600" height="1100" fill="url(#rise)" />
+  <!-- horizon glow -->
+  <ellipse cx="800" cy="700" rx="900" ry="260" fill="#fff6e8" opacity="0.85" filter="url(#b3h)" />
+  <!-- sun (visible) -->
+  <circle cx="800" cy="680" r="160" fill="#c9a36a" opacity="0.55" filter="url(#b3m)" />
+  <circle cx="800" cy="680" r="100" fill="#fff6e8" opacity="0.95" filter="url(#b3l)" />
+  <!-- rays -->
+  <g stroke="#c9a36a" stroke-width="6" stroke-linecap="round" opacity="0.4" filter="url(#b3l)">
+    <line x1="800" y1="380" x2="800" y2="460" />
+    <line x1="500" y1="680" x2="580" y2="680" />
+    <line x1="1020" y1="680" x2="1100" y2="680" />
+    <line x1="600" y1="490" x2="650" y2="530" />
+    <line x1="1000" y1="490" x2="950" y2="530" />
+    <line x1="370" y1="540" x2="420" y2="580" />
+    <line x1="1230" y1="540" x2="1180" y2="580" />
+    <line x1="800" y1="900" x2="800" y2="850" />
+  </g>
+  <!-- side washes (clouds) -->
+  <ellipse cx="180" cy="430" rx="240" ry="160" fill="#fce7e0" opacity="0.55" filter="url(#b3h)" />
+  <ellipse cx="1450" cy="400" rx="240" ry="160" fill="#f5c5b8" opacity="0.45" filter="url(#b3h)" />
+  <!-- morning star -->
+  <circle cx="280" cy="180" r="7" fill="#c9a36a" opacity="0.85" filter="url(#b3l)" />
+  <circle cx="280" cy="180" r="18" fill="#c9a36a" opacity="0.3" filter="url(#b3l)" />
 </svg>

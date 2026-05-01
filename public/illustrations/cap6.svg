@@ -1,33 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <filter id="b6" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="78" />
-    </filter>
-    <radialGradient id="day" cx="50%" cy="50%" r="75%">
-      <stop offset="0%" stop-color="#fff3e0" stop-opacity="0.85" />
+    <filter id="b6h" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55" /></filter>
+    <filter id="b6l" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5" /></filter>
+    <radialGradient id="day6" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#fff6e8" stop-opacity="0.8" />
       <stop offset="100%" stop-color="#fdf6ee" stop-opacity="0.4" />
     </radialGradient>
   </defs>
   <rect width="1600" height="1100" fill="#fdf6ee" />
-  <rect width="1600" height="1100" fill="url(#day)" />
-  <!-- four soft watercolor blooms in different palette colors -->
-  <ellipse cx="350" cy="300" rx="380" ry="280" fill="#fce7e0" filter="url(#b6)" opacity="0.7" />
-  <ellipse cx="1280" cy="320" rx="420" ry="300" fill="#f5c5b8" filter="url(#b6)" opacity="0.55" />
-  <ellipse cx="280" cy="820" rx="360" ry="280" fill="#a8b89c" filter="url(#b6)" opacity="0.4" />
-  <ellipse cx="1300" cy="820" rx="380" ry="300" fill="#fff3e0" filter="url(#b6)" opacity="0.7" />
-  <ellipse cx="800" cy="550" rx="280" ry="220" fill="#d49380" filter="url(#b6)" opacity="0.18" />
-  <!-- floating petals -->
-  <g fill="#d49380" opacity="0.45">
-    <circle cx="500" cy="200" r="9" />
-    <circle cx="950" cy="280" r="7" />
-    <circle cx="1100" cy="640" r="8" />
-    <circle cx="640" cy="780" r="9" />
-    <circle cx="180" cy="600" r="7" />
-    <circle cx="1450" cy="540" r="8" />
+  <rect width="1600" height="1100" fill="url(#day6)" />
+  <!-- four soft watercolor blooms -->
+  <ellipse cx="350" cy="320" rx="380" ry="280" fill="#fce7e0" opacity="0.65" filter="url(#b6h)" />
+  <ellipse cx="1280" cy="320" rx="420" ry="300" fill="#f5c5b8" opacity="0.5" filter="url(#b6h)" />
+  <ellipse cx="280" cy="820" rx="360" ry="280" fill="#a8b89c" opacity="0.35" filter="url(#b6h)" />
+  <ellipse cx="1320" cy="820" rx="380" ry="300" fill="#fff6e8" opacity="0.6" filter="url(#b6h)" />
+  <!-- visible petals (daisy-like, deliberate) -->
+  <g filter="url(#b6l)">
+    <ellipse cx="500" cy="200" rx="22" ry="11" fill="#d49380" opacity="0.6" transform="rotate(30 500 200)" />
+    <ellipse cx="950" cy="260" rx="20" ry="10" fill="#d49380" opacity="0.55" transform="rotate(-20 950 260)" />
+    <ellipse cx="1100" cy="640" rx="24" ry="12" fill="#d49380" opacity="0.65" transform="rotate(45 1100 640)" />
+    <ellipse cx="640" cy="780" rx="24" ry="12" fill="#d49380" opacity="0.6" transform="rotate(-30 640 780)" />
+    <ellipse cx="180" cy="600" rx="20" ry="10" fill="#d49380" opacity="0.5" transform="rotate(15 180 600)" />
+    <ellipse cx="1450" cy="540" rx="22" ry="11" fill="#d49380" opacity="0.55" transform="rotate(60 1450 540)" />
+    <ellipse cx="800" cy="980" rx="24" ry="12" fill="#d49380" opacity="0.5" transform="rotate(-50 800 980)" />
+    <ellipse cx="800" cy="100" rx="20" ry="10" fill="#d49380" opacity="0.45" transform="rotate(40 800 100)" />
+    <ellipse cx="350" cy="950" rx="20" ry="10" fill="#a8b89c" opacity="0.5" transform="rotate(20 350 950)" />
+    <ellipse cx="1250" cy="980" rx="22" ry="11" fill="#a8b89c" opacity="0.5" transform="rotate(-15 1250 980)" />
   </g>
-  <g fill="#c9a36a" opacity="0.35">
-    <circle cx="700" cy="150" r="5" />
-    <circle cx="1200" cy="450" r="6" />
-    <circle cx="900" cy="900" r="5" />
+  <!-- gold sparkles -->
+  <g fill="#c9a36a" filter="url(#b6l)">
+    <circle cx="700" cy="450" r="6" opacity="0.6" />
+    <circle cx="1200" cy="450" r="6" opacity="0.6" />
+    <circle cx="900" cy="700" r="5" opacity="0.55" />
+    <circle cx="450" cy="500" r="5" opacity="0.5" />
   </g>
 </svg>
