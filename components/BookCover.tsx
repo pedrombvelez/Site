@@ -15,7 +15,7 @@ export function BookCover({ onOpen }: Props) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, scale: 0.96 }}
       transition={{ duration: 0.6 }}
-      className="relative h-full w-full flex items-center justify-center px-6"
+      className="relative h-full w-full flex items-center justify-center px-4 sm:px-6 py-8"
     >
       {/* Floating petals */}
       <Petals />
@@ -26,26 +26,26 @@ export function BookCover({ onOpen }: Props) {
         transition={{ delay: 0.2, duration: 0.7, ease: "easeOut" }}
         className="relative max-w-md w-full text-center"
       >
-        <div className="relative paper rounded-[2rem] border border-terracotta/30 shadow-2xl px-8 sm:px-12 py-14 sm:py-16">
+        <div className="relative paper rounded-[1.5rem] sm:rounded-[2rem] border border-terracotta/30 shadow-2xl px-6 sm:px-12 py-10 sm:py-16">
           {/* Corner ornaments */}
-          <Heart className="absolute top-5 left-5 h-4 w-4 text-rose" fill="currentColor" />
-          <Heart className="absolute top-5 right-5 h-4 w-4 text-rose" fill="currentColor" />
-          <Heart className="absolute bottom-5 left-5 h-4 w-4 text-rose" fill="currentColor" />
-          <Heart className="absolute bottom-5 right-5 h-4 w-4 text-rose" fill="currentColor" />
+          <Heart className="absolute top-4 left-4 sm:top-5 sm:left-5 h-3.5 w-3.5 sm:h-4 sm:w-4 text-rose" fill="currentColor" />
+          <Heart className="absolute top-4 right-4 sm:top-5 sm:right-5 h-3.5 w-3.5 sm:h-4 sm:w-4 text-rose" fill="currentColor" />
+          <Heart className="absolute bottom-4 left-4 sm:bottom-5 sm:left-5 h-3.5 w-3.5 sm:h-4 sm:w-4 text-rose" fill="currentColor" />
+          <Heart className="absolute bottom-4 right-4 sm:bottom-5 sm:right-5 h-3.5 w-3.5 sm:h-4 sm:w-4 text-rose" fill="currentColor" />
 
-          <p className="font-handwritten text-2xl text-terracotta-deep">
+          <p className="font-handwritten text-xl sm:text-2xl text-terracotta-deep">
             feliz dia da mãe
           </p>
-          <h1 className="mt-3 font-serif italic text-4xl sm:text-5xl text-ink leading-tight">
+          <h1 className="mt-2 sm:mt-3 font-serif italic text-3xl sm:text-5xl text-ink leading-tight">
             {BOOK_TITLE}
           </h1>
-          <p className="mt-4 font-handwritten text-2xl text-ink-soft">
+          <p className="mt-3 sm:mt-4 font-handwritten text-xl sm:text-2xl text-ink-soft">
             {BOOK_SUBTITLE}
           </p>
 
-          <div className="mx-auto my-7 h-px w-24 bg-terracotta/40" />
+          <div className="mx-auto my-5 sm:my-7 h-px w-24 bg-terracotta/40" />
 
-          <p className="font-serif italic text-lg text-ink/80 mb-6">
+          <p className="font-serif italic text-base sm:text-lg text-ink/80 mb-5 sm:mb-6 leading-relaxed">
             Vira as páginas devagar.
             <br />
             Em cada uma há coisas escondidas — clica nos pontinhos.
@@ -54,10 +54,10 @@ export function BookCover({ onOpen }: Props) {
           <button
             type="button"
             onClick={onOpen}
-            className="group inline-flex items-center gap-3 rounded-full bg-terracotta px-7 py-3.5 text-cream shadow-lg hover:bg-terracotta-deep transition-all hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-terracotta/40"
+            className="group inline-flex items-center gap-3 rounded-full bg-terracotta px-6 sm:px-7 py-3 sm:py-3.5 text-cream shadow-lg hover:bg-terracotta-deep active:scale-95 transition-all hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-terracotta/40"
           >
             <BookOpen className="h-5 w-5 group-hover:rotate-[-6deg] transition-transform" />
-            <span className="font-serif text-xl">Abrir o livro</span>
+            <span className="font-serif text-lg sm:text-xl">Abrir o livro</span>
           </button>
         </div>
       </motion.div>

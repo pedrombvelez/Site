@@ -104,14 +104,17 @@ export function Book() {
   );
 
   return (
-    <div className="relative flex flex-col min-h-screen">
+    <div className="relative flex flex-col min-h-screen-dvh">
       {/* Book stage */}
-      <div className="flex-1 flex items-center justify-center p-4 sm:p-8">
+      <div className="flex-1 flex items-stretch sm:items-center justify-center p-0 sm:p-6 md:p-8">
         <div
           className={cn(
             "relative w-full max-w-4xl",
-            "aspect-[3/4] sm:aspect-[4/5] md:aspect-[5/4]",
-            "rounded-[1.75rem] shadow-2xl ring-1 ring-terracotta/20",
+            // Mobile: fill almost the whole viewport (book IS the screen).
+            // Tablet+: book has its own card aspect.
+            "min-h-[calc(100dvh-7rem)] sm:min-h-0",
+            "sm:aspect-[4/5] md:aspect-[5/4]",
+            "rounded-none sm:rounded-[1.75rem] shadow-2xl ring-1 ring-terracotta/20",
             "bg-cream paper overflow-hidden",
           )}
           style={{ perspective: "1400px" }}
@@ -144,8 +147,8 @@ export function Book() {
 
       {/* Footer: nav + progress + final button */}
       {view.kind === "chapter" && (
-        <div className="sticky bottom-0 z-30 mx-auto w-full max-w-4xl px-4 pb-5">
-          <div className="rounded-2xl bg-cream/90 backdrop-blur border border-terracotta/30 shadow-lg">
+        <div className="sticky bottom-0 z-30 mx-auto w-full max-w-4xl px-2 sm:px-4 pb-2 sm:pb-5 safe-bottom">
+          <div className="rounded-2xl bg-cream/95 backdrop-blur border border-terracotta/30 shadow-lg">
             <PageNav
               current={view.index + 1}
               total={CHAPTERS.length}
@@ -154,7 +157,7 @@ export function Book() {
               canPrev={true}
               canNext={view.index < CHAPTERS.length - 1}
             />
-            <div className="border-t border-terracotta/20 px-4 sm:px-8 py-3 flex items-center justify-between gap-3 flex-wrap">
+            <div className="border-t border-terracotta/20 px-3 sm:px-8 py-2.5 sm:py-3 flex items-center justify-between gap-2 flex-wrap">
               <ProgressCounter discovered={discovered.size} total={TOTAL_HOTSPOTS} />
               {onLastChapter && (
                 <button
@@ -162,7 +165,7 @@ export function Book() {
                   onClick={() => setFinalOpen(true)}
                   disabled={!allDiscovered}
                   className={cn(
-                    "inline-flex items-center gap-2 rounded-full px-5 py-2.5 font-serif text-lg transition-all",
+                    "inline-flex items-center gap-2 rounded-full px-4 sm:px-5 py-2 sm:py-2.5 font-serif text-base sm:text-lg transition-all",
                     allDiscovered
                       ? "bg-terracotta text-cream shadow-md hover:bg-terracotta-deep hover:scale-105 focus-visible:ring-4 focus-visible:ring-terracotta/40"
                       : "bg-cream border border-terracotta/30 text-ink-soft cursor-not-allowed opacity-70",
@@ -179,7 +182,7 @@ export function Book() {
                     <Heart className="h-4 w-4" />
                   )}
                   <span>
-                    {allDiscovered ? "Beijinho final" : "Falta descobrires alguns…"}
+                    {allDiscovered ? "Beijinho final" : "Faltam alguns ♡"}
                   </span>
                 </button>
               )}

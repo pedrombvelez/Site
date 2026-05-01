@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Caveat } from "next/font/google";
 import "./globals.css";
 
@@ -35,6 +35,12 @@ export const metadata: Metadata = {
   // for partilhado (WhatsApp, iMessage, etc.).
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#fdf6ee",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -45,7 +51,7 @@ export default function RootLayout({
       lang="pt-PT"
       className={`${cormorant.variable} ${caveat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-screen-dvh flex flex-col">{children}</body>
     </html>
   );
 }

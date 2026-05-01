@@ -95,3 +95,20 @@ body {
     display: none;
   }
 }
+
+/* iOS Safari-friendly full-screen height */
+.min-h-screen-dvh {
+  min-height: 100vh; /* fallback */
+  min-height: 100dvh;
+}
+
+/* Prevent text from going under iOS home indicator / safe area */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Touch-friendly tap target without visual change */
+.touch-target {
+  min-width: 44px;
+  min-height: 44px;
+}
