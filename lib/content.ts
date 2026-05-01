@@ -61,9 +61,10 @@ export const CHAPTERS: Chapter[] = [
         icon: "sparkle",
         label: "O teste",
         reveal: {
-          type: "photo",
-          src: "https://picsum.photos/seed/teste/900/1200",
-          caption: "(troca por uma foto do teste, ou da nossa cara nesse dia)",
+          type: "message",
+          text:
+            "Uma cruz. Foi assim que soubemos. " +
+            "Pequenina, mas suficiente para mudar, para sempre, o mapa do mundo.",
         },
       },
       {
@@ -115,7 +116,7 @@ export const CHAPTERS: Chapter[] = [
         label: "A ecografia",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/ecografia/900/1200",
+          src: "/api/asset/f656026f-9b30-4157-bb3b-cc76152d5ff4.jpeg",
           caption: "Olá, Mirtilo.",
         },
       },
@@ -127,7 +128,7 @@ export const CHAPTERS: Chapter[] = [
         label: "Barriga em flor",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/barriga/900/1200",
+          src: "/api/asset/0259d995-c5e3-4a13-8c82-c722fa98d62c.jpeg",
           caption:
             "A casa onde o Pedrinho viveu quando gostava de se vestir de Matilde.",
         },
@@ -140,9 +141,8 @@ export const CHAPTERS: Chapter[] = [
         label: "Os teus pontapés",
         reveal: {
           type: "video",
-          src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-          caption:
-            "(troca por um vídeo dos pontapés do Pedrinho na barriga)",
+          src: "/api/asset/2ace7cfa-8213-4687-9328-2043821501b7.mov",
+          caption: "Os teus primeiros sinais.",
         },
       },
       {
@@ -183,8 +183,8 @@ export const CHAPTERS: Chapter[] = [
         label: "A primeira foto",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/primeira-foto/900/1200",
-          caption: "Olá, mundo. (troca pela primeira foto do Pedrinho)",
+          src: "/api/asset/22D0F858-A065-459B-81E1-69F5E7231B76.jpeg",
+          caption: "Olá, mundo.",
         },
       },
       {
@@ -206,8 +206,8 @@ export const CHAPTERS: Chapter[] = [
         label: "Beijinho",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/beijinho/900/1200",
-          caption: "(troca pela foto a mandar um beijinho)",
+          src: "/api/asset/70c0f33f-346c-49b9-944a-af1bfd120b3b.jpeg",
+          caption: "Um beijinho de chegada.",
         },
       },
     ],
@@ -231,7 +231,7 @@ export const CHAPTERS: Chapter[] = [
         label: "A dormir ao colo",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/colo/900/1200",
+          src: "/api/asset/d443ec62-f609-493e-bbbe-b64dc10944e4.jpeg",
           caption: "Sem saberes, já eras feliz.",
         },
       },
@@ -243,8 +243,8 @@ export const CHAPTERS: Chapter[] = [
         label: "Hora do banho",
         reveal: {
           type: "video",
-          src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-          caption: "(troca por um vídeo de um banho — mas não o primeiro)",
+          src: "/api/asset/3e5bd6f0-b180-4cd8-b404-5626fa593cca.mov",
+          caption: "Tempo de água.",
         },
       },
       {
@@ -284,8 +284,8 @@ export const CHAPTERS: Chapter[] = [
         label: "Primeiro Natal",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/natal/900/1200",
-          caption: "(troca pela foto do primeiro Natal)",
+          src: "/api/asset/725cbeec-41e8-4ae7-a69f-6cf1f7c4ca4d.jpeg",
+          caption: "O nosso primeiro Natal a três.",
         },
       },
       {
@@ -296,8 +296,8 @@ export const CHAPTERS: Chapter[] = [
         label: "Com os avós",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/avos/900/1200",
-          caption: "(troca pela foto com os avós maternos)",
+          src: "/api/asset/28fbc323-023f-45b4-a519-a4727a111657.jpeg",
+          caption: "Com os avós maternos.",
         },
       },
       {
@@ -334,7 +334,7 @@ export const CHAPTERS: Chapter[] = [
         label: "Hora de dormir",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/dormir-1/900/1200",
+          src: "/api/asset/240549ED-D397-4D27-BD00-94E0F451472B.jpeg",
           caption: "Hora de dormir.",
         },
       },
@@ -346,7 +346,7 @@ export const CHAPTERS: Chapter[] = [
         label: "Hora de dormir outra vez",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/dormir-2/900/1200",
+          src: "/api/asset/IMG_6126.jpeg",
           caption: "Hora de dormir outra vez.",
         },
       },
@@ -358,8 +358,8 @@ export const CHAPTERS: Chapter[] = [
         label: "Hora de acordar a mamã",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/acordar/900/1200",
-          caption: "Hora de acordar a mamã.",
+          src: "/api/asset/IMG_5856.jpeg",
+          caption: "«Mamã, está na hora de brincar!»",
         },
       },
       {
@@ -370,8 +370,8 @@ export const CHAPTERS: Chapter[] = [
         label: "Hora de dormir com a mamã",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/dormir-mae/900/1200",
-          caption: "Hora de dormir com a mamã. O sítio mais seguro do mundo.",
+          src: "/api/asset/IMG_5691.jpeg",
+          caption: "O sítio mais seguro do mundo.",
         },
       },
       {
@@ -382,7 +382,7 @@ export const CHAPTERS: Chapter[] = [
         label: "Podes-me dobrar também?",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/dobrar/900/1200",
+          src: "/api/asset/f0e7868a-d3e9-4575-911b-f309668482f0.jpeg",
           caption: "«Podes-me dobrar também, mamã? Eu porto-me bem.»",
         },
       },
@@ -442,8 +442,8 @@ export const CHAPTERS: Chapter[] = [
         label: "Foto dos três",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/familia/900/1200",
-          caption: "Nós os três. (substituir pela foto preferida da família)",
+          src: "/api/asset/IMG_6190.png",
+          caption: "Nós os três.",
         },
       },
     ],
