@@ -74,8 +74,9 @@ export const CHAPTERS: Chapter[] = [
         reveal: {
           type: "message",
           text:
-            "Senti o chão a abrir-se em flores. Senti medo, do bom. " +
-            "Olhei para ti e pensei: nunca, em toda a minha vida, te vi tão bonita.",
+            "Pedimos na capela em Lyon, soubemos contigo na Suíça e eu em " +
+            "Portugal, com viagem marcada para o Brasil. " +
+            "Mas nesse dia tudo mudou, para sempre.",
           signature: "— teu marido",
         },
       },
@@ -88,8 +89,8 @@ export const CHAPTERS: Chapter[] = [
         reveal: {
           type: "message",
           text:
-            "Prometi a mim mesmo que te ia tratar como uma rainha durante toda esta viagem. " +
-            "Espero estar a cumprir, mamã.",
+            "que íamos ser os melhores pais do mundo, " +
+            "e que tudo seria para o nosso pequeno.",
         },
       },
     ],
