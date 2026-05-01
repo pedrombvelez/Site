@@ -1,8 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
   <defs>
     <filter id="b4h" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55" /></filter>
-    <filter id="b4m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18" /></filter>
-    <filter id="b4l" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6" /></filter>
+    <filter id="b4m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10" /></filter>
+    <radialGradient id="moon4" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="60%" stop-color="#fff6e8" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#fff6e8" stop-opacity="0" />
+    </radialGradient>
     <radialGradient id="night4" cx="50%" cy="40%" r="90%">
       <stop offset="0%" stop-color="#fdf6ee" stop-opacity="0.9" />
       <stop offset="60%" stop-color="#e8dfe8" stop-opacity="0.55" />
@@ -11,33 +15,28 @@
   </defs>
   <rect width="1600" height="1100" fill="#fdf6ee" />
   <rect width="1600" height="1100" fill="url(#night4)" />
-  <!-- night washes (lavender + soft peach) -->
-  <ellipse cx="320" cy="320" rx="400" ry="280" fill="#cbc1d6" opacity="0.5" filter="url(#b4h)" />
+  <!-- night washes -->
+  <ellipse cx="320" cy="320" rx="400" ry="280" fill="#cbc1d6" opacity="0.55" filter="url(#b4h)" />
   <ellipse cx="1300" cy="380" rx="450" ry="320" fill="#fce7e0" opacity="0.45" filter="url(#b4h)" />
-  <!-- crescent moon halo -->
-  <circle cx="1230" cy="280" r="240" fill="#fff6e8" opacity="0.5" filter="url(#b4h)" />
-  <!-- crescent moon (visible) -->
-  <g filter="url(#b4m)">
-    <circle cx="1230" cy="280" r="135" fill="#fff6e8" />
-    <circle cx="1295" cy="260" r="120" fill="#e8dfe8" opacity="0.92" />
-  </g>
+  <!-- moon halo -->
+  <circle cx="1230" cy="300" r="240" fill="#fff6e8" opacity="0.45" filter="url(#b4h)" />
+  <!-- moon disc -->
+  <circle cx="1230" cy="300" r="160" fill="url(#moon4)" filter="url(#b4m)" />
+  <!-- crescent shadow (subtle warm glow on right side suggesting crescent) -->
+  <circle cx="1290" cy="280" r="140" fill="#cbc1d6" opacity="0.35" filter="url(#b4m)" />
   <!-- cradle curve at bottom -->
   <ellipse cx="800" cy="1080" rx="900" ry="200" fill="#f5c5b8" opacity="0.4" filter="url(#b4h)" />
-  <!-- visible stars -->
-  <g fill="#c9a36a" filter="url(#b4l)">
-    <circle cx="240" cy="180" r="5" opacity="0.85" />
-    <circle cx="450" cy="100" r="4" opacity="0.75" />
-    <circle cx="640" cy="200" r="5" opacity="0.85" />
-    <circle cx="900" cy="140" r="4" opacity="0.75" />
-    <circle cx="1080" cy="220" r="4" opacity="0.8" />
-    <circle cx="1450" cy="140" r="5" opacity="0.7" />
-    <circle cx="180" cy="500" r="4" opacity="0.6" />
-    <circle cx="380" cy="660" r="4" opacity="0.65" />
-    <circle cx="700" cy="500" r="5" opacity="0.6" />
-  </g>
-  <!-- twinkles around moon -->
-  <g fill="#c9a36a" filter="url(#b4l)">
-    <circle cx="1100" cy="180" r="6" opacity="0.65" />
-    <circle cx="1400" cy="450" r="5" opacity="0.55" />
+  <!-- clearly visible stars -->
+  <g fill="#c9a36a" filter="url(#b4m)">
+    <path d="M 240 170 L 246 188 L 263 192 L 246 196 L 240 214 L 234 196 L 217 192 L 234 188 Z" opacity="0.85" />
+    <path d="M 450 95 L 455 110 L 469 113 L 455 116 L 450 131 L 445 116 L 431 113 L 445 110 Z" opacity="0.75" />
+    <path d="M 640 195 L 646 213 L 663 217 L 646 221 L 640 239 L 634 221 L 617 217 L 634 213 Z" opacity="0.85" />
+    <path d="M 900 130 L 905 145 L 919 148 L 905 151 L 900 166 L 895 151 L 881 148 L 895 145 Z" opacity="0.75" />
+    <path d="M 1080 215 L 1085 230 L 1099 233 L 1085 236 L 1080 251 L 1075 236 L 1061 233 L 1075 230 Z" opacity="0.8" />
+    <circle cx="180" cy="500" r="5" opacity="0.65" />
+    <circle cx="380" cy="660" r="5" opacity="0.65" />
+    <circle cx="700" cy="500" r="6" opacity="0.6" />
+    <circle cx="1450" cy="170" r="5" opacity="0.65" />
+    <circle cx="1100" cy="180" r="5" opacity="0.6" />
   </g>
 </svg>

@@ -1,48 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
   <defs>
     <filter id="b7h" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55" /></filter>
-    <filter id="b7m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="20" /></filter>
-    <filter id="b7l" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6" /></filter>
+    <filter id="b7m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="14" /></filter>
     <radialGradient id="glow7" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#fce7e0" stop-opacity="0.85" />
-      <stop offset="60%" stop-color="#f5c5b8" stop-opacity="0.45" />
+      <stop offset="0%" stop-color="#fce7e0" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#f5c5b8" stop-opacity="0.5" />
       <stop offset="100%" stop-color="#fdf6ee" stop-opacity="0.2" />
+    </radialGradient>
+    <radialGradient id="heartfill" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#f5c5b8" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#d49380" stop-opacity="0.85" />
     </radialGradient>
   </defs>
   <rect width="1600" height="1100" fill="#fdf6ee" />
   <rect width="1600" height="1100" fill="url(#glow7)" />
   <!-- side washes -->
-  <ellipse cx="200" cy="400" rx="380" ry="300" fill="#fce7e0" opacity="0.6" filter="url(#b7h)" />
-  <ellipse cx="1400" cy="500" rx="380" ry="300" fill="#f5c5b8" opacity="0.5" filter="url(#b7h)" />
-  <ellipse cx="700" cy="950" rx="500" ry="220" fill="#a8b89c" opacity="0.3" filter="url(#b7h)" />
+  <ellipse cx="200" cy="400" rx="380" ry="300" fill="#fce7e0" opacity="0.65" filter="url(#b7h)" />
+  <ellipse cx="1400" cy="500" rx="380" ry="300" fill="#f5c5b8" opacity="0.55" filter="url(#b7h)" />
+  <ellipse cx="700" cy="950" rx="500" ry="220" fill="#a8b89c" opacity="0.32" filter="url(#b7h)" />
   <!-- heart halo -->
-  <circle cx="800" cy="540" r="320" fill="#f5c5b8" opacity="0.4" filter="url(#b7h)" />
-  <!-- big heart shape (visible) -->
-  <g filter="url(#b7m)" opacity="0.65">
+  <circle cx="800" cy="540" r="320" fill="#f5c5b8" opacity="0.45" filter="url(#b7h)" />
+  <!-- big heart shape (clearly visible) -->
+  <g filter="url(#b7m)">
     <path d="M 800 720
              C 720 660, 540 620, 540 480
              C 540 380, 660 340, 800 460
              C 940 340, 1060 380, 1060 480
              C 1060 620, 880 660, 800 720
              Z"
+          fill="url(#heartfill)" />
+  </g>
+  <!-- small accent heart -->
+  <g filter="url(#b7m)" opacity="0.55">
+    <path d="M 1180 250
+             C 1160 230, 1120 220, 1120 190
+             C 1120 170, 1150 162, 1180 188
+             C 1210 162, 1240 170, 1240 190
+             C 1240 220, 1200 230, 1180 250
+             Z"
           fill="#d49380" />
   </g>
-  <!-- inner highlight -->
-  <g filter="url(#b7l)" opacity="0.4">
-    <path d="M 800 680
-             C 740 620, 600 600, 600 500
-             C 600 430, 700 410, 800 480
-             C 900 410, 1000 430, 1000 500
-             C 1000 600, 860 620, 800 680
-             Z"
-          fill="#fce7e0" />
-  </g>
   <!-- gold sparkles -->
-  <g fill="#c9a36a" filter="url(#b7l)">
-    <circle cx="380" cy="220" r="7" opacity="0.7" />
-    <circle cx="1200" cy="180" r="6" opacity="0.65" />
-    <circle cx="240" cy="780" r="7" opacity="0.6" />
-    <circle cx="1360" cy="820" r="6" opacity="0.65" />
-    <circle cx="800" cy="120" r="5" opacity="0.6" />
+  <g fill="#c9a36a" filter="url(#b7m)">
+    <path d="M 380 220 L 386 238 L 403 242 L 386 246 L 380 264 L 374 246 L 357 242 L 374 238 Z" opacity="0.75" />
+    <path d="M 240 800 L 246 818 L 263 822 L 246 826 L 240 844 L 234 826 L 217 822 L 234 818 Z" opacity="0.7" />
+    <path d="M 1360 820 L 1366 836 L 1382 840 L 1366 844 L 1360 860 L 1354 844 L 1338 840 L 1354 836 Z" opacity="0.7" />
+    <circle cx="800" cy="120" r="6" opacity="0.6" />
+    <circle cx="500" cy="900" r="5" opacity="0.55" />
   </g>
 </svg>

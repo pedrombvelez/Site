@@ -1,8 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
   <defs>
     <filter id="b2h" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55" /></filter>
-    <filter id="b2m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="16" /></filter>
-    <filter id="b2l" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6" /></filter>
+    <filter id="b2m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10" /></filter>
+    <radialGradient id="moonglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#fff6e8" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#fff6e8" stop-opacity="0" />
+    </radialGradient>
     <radialGradient id="bg2" cx="50%" cy="60%" r="80%">
       <stop offset="0%" stop-color="#fce7e0" stop-opacity="0.8" />
       <stop offset="100%" stop-color="#fdf6ee" stop-opacity="0.4" />
@@ -11,26 +15,24 @@
   <rect width="1600" height="1100" fill="#fdf6ee" />
   <rect width="1600" height="1100" fill="url(#bg2)" />
   <!-- background washes -->
-  <ellipse cx="800" cy="780" rx="500" ry="320" fill="#f5c5b8" opacity="0.4" filter="url(#b2h)" />
-  <ellipse cx="200" cy="240" rx="280" ry="200" fill="#a8b89c" opacity="0.3" filter="url(#b2h)" />
-  <!-- crescent moon halo -->
-  <circle cx="1280" cy="280" r="220" fill="#fff6e8" opacity="0.55" filter="url(#b2h)" />
-  <!-- crescent moon (subtractive) -->
-  <g filter="url(#b2m)">
-    <circle cx="1280" cy="280" r="135" fill="#fff6e8" />
-    <circle cx="1340" cy="260" r="115" fill="#fce7e0" opacity="0.95" />
-  </g>
-  <!-- soft round belly hint lower-center -->
-  <ellipse cx="800" cy="800" rx="240" ry="180" fill="#f5c5b8" opacity="0.4" filter="url(#b2m)" />
-  <ellipse cx="800" cy="800" rx="120" ry="100" fill="#fce7e0" opacity="0.45" filter="url(#b2l)" />
+  <ellipse cx="800" cy="780" rx="500" ry="320" fill="#f5c5b8" opacity="0.45" filter="url(#b2h)" />
+  <ellipse cx="200" cy="240" rx="280" ry="200" fill="#a8b89c" opacity="0.32" filter="url(#b2h)" />
+  <ellipse cx="1380" cy="850" rx="320" ry="220" fill="#fce7e0" opacity="0.5" filter="url(#b2h)" />
+  <!-- moon: full glowing disc visible (no white-on-cream issue) -->
+  <circle cx="1260" cy="320" r="260" fill="#fff6e8" opacity="0.4" filter="url(#b2h)" />
+  <circle cx="1260" cy="320" r="150" fill="url(#moonglow)" filter="url(#b2m)" />
+  <!-- crescent shadow: a soft warm shape that creates the crescent feel -->
+  <circle cx="1320" cy="300" r="135" fill="#f5c5b8" opacity="0.55" filter="url(#b2m)" />
+  <!-- belly hint lower-center (round, soft) -->
+  <ellipse cx="800" cy="800" rx="260" ry="200" fill="#f5c5b8" opacity="0.45" filter="url(#b2m)" />
   <!-- gold dust scattered like a conversation in the dark -->
-  <g fill="#c9a36a" filter="url(#b2l)">
-    <circle cx="450" cy="380" r="6" opacity="0.7" />
-    <circle cx="1100" cy="500" r="5" opacity="0.6" />
-    <circle cx="280" cy="700" r="7" opacity="0.65" />
-    <circle cx="1400" cy="700" r="5" opacity="0.55" />
-    <circle cx="600" cy="200" r="4" opacity="0.5" />
-    <circle cx="980" cy="380" r="4" opacity="0.55" />
-    <circle cx="500" cy="900" r="5" opacity="0.5" />
+  <g fill="#c9a36a" filter="url(#b2m)">
+    <circle cx="450" cy="380" r="8" opacity="0.75" />
+    <circle cx="1100" cy="500" r="7" opacity="0.65" />
+    <circle cx="280" cy="700" r="9" opacity="0.7" />
+    <circle cx="600" cy="200" r="6" opacity="0.55" />
+    <circle cx="980" cy="380" r="6" opacity="0.6" />
+    <circle cx="500" cy="900" r="7" opacity="0.55" />
+    <circle cx="1450" cy="500" r="6" opacity="0.5" />
   </g>
 </svg>

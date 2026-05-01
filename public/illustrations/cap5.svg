@@ -1,8 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
   <defs>
     <filter id="b5h" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55" /></filter>
-    <filter id="b5m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="16" /></filter>
-    <filter id="b5l" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5" /></filter>
+    <filter id="b5m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10" /></filter>
     <radialGradient id="festive5" cx="50%" cy="55%" r="75%">
       <stop offset="0%" stop-color="#fff6e8" stop-opacity="0.85" />
       <stop offset="100%" stop-color="#fdf6ee" stop-opacity="0.45" />
@@ -10,34 +9,36 @@
   </defs>
   <rect width="1600" height="1100" fill="#fdf6ee" />
   <rect width="1600" height="1100" fill="url(#festive5)" />
-  <!-- sage washes (festive green) -->
-  <ellipse cx="300" cy="380" rx="380" ry="280" fill="#a8b89c" opacity="0.4" filter="url(#b5h)" />
+  <!-- sage washes -->
+  <ellipse cx="280" cy="380" rx="380" ry="280" fill="#a8b89c" opacity="0.42" filter="url(#b5h)" />
   <ellipse cx="1380" cy="700" rx="420" ry="320" fill="#a8b89c" opacity="0.35" filter="url(#b5h)" />
-  <!-- pine tree silhouette (visible) -->
-  <g filter="url(#b5m)" opacity="0.5">
+  <!-- pine tree silhouette (clearly visible) -->
+  <g filter="url(#b5m)" opacity="0.6">
     <polygon points="800,260 720,470 770,470 700,650 830,650 750,840 940,840 870,650 1000,650 930,470 980,470 870,260" fill="#6a8076" />
+    <rect x="785" y="840" width="30" height="60" fill="#8b6f4e" />
   </g>
-  <!-- star on top + halo -->
-  <circle cx="800" cy="240" r="80" fill="#c9a36a" opacity="0.3" filter="url(#b5h)" />
-  <g filter="url(#b5l)">
-    <polygon points="800,180 815,225 860,225 825,255 838,300 800,275 762,300 775,255 740,225 785,225" fill="#c9a36a" opacity="0.85" />
+  <!-- star + halo on top of tree -->
+  <circle cx="800" cy="240" r="80" fill="#c9a36a" opacity="0.32" filter="url(#b5h)" />
+  <g filter="url(#b5m)">
+    <path d="M 800 175 L 818 230 L 875 230 L 829 263 L 847 320 L 800 285 L 753 320 L 771 263 L 725 230 L 782 230 Z" fill="#c9a36a" opacity="0.9" />
   </g>
-  <!-- ornaments on tree (gold + rose) -->
-  <g filter="url(#b5l)">
-    <circle cx="780" cy="500" r="11" fill="#c9a36a" opacity="0.85" />
-    <circle cx="850" cy="600" r="10" fill="#d49380" opacity="0.8" />
-    <circle cx="730" cy="700" r="11" fill="#c9a36a" opacity="0.8" />
-    <circle cx="900" cy="780" r="10" fill="#d49380" opacity="0.75" />
-    <circle cx="800" cy="430" r="9" fill="#d49380" opacity="0.85" />
+  <!-- ornaments on tree (gold + rose, larger) -->
+  <g filter="url(#b5m)">
+    <circle cx="780" cy="500" r="14" fill="#c9a36a" opacity="0.9" />
+    <circle cx="850" cy="600" r="13" fill="#d49380" opacity="0.85" />
+    <circle cx="730" cy="700" r="14" fill="#c9a36a" opacity="0.85" />
+    <circle cx="900" cy="780" r="13" fill="#d49380" opacity="0.8" />
+    <circle cx="800" cy="430" r="12" fill="#d49380" opacity="0.9" />
   </g>
   <!-- floor blush -->
-  <ellipse cx="800" cy="1050" rx="1000" ry="180" fill="#f5c5b8" opacity="0.35" filter="url(#b5h)" />
+  <ellipse cx="800" cy="1050" rx="1000" ry="180" fill="#f5c5b8" opacity="0.4" filter="url(#b5h)" />
   <!-- distant gold sparkles like fairy lights -->
-  <g fill="#c9a36a" filter="url(#b5l)">
-    <circle cx="280" cy="850" r="6" opacity="0.6" />
-    <circle cx="1300" cy="280" r="5" opacity="0.55" />
-    <circle cx="180" cy="600" r="5" opacity="0.5" />
-    <circle cx="1450" cy="900" r="6" opacity="0.55" />
-    <circle cx="500" cy="200" r="5" opacity="0.5" />
+  <g fill="#c9a36a" filter="url(#b5m)">
+    <circle cx="280" cy="850" r="7" opacity="0.65" />
+    <circle cx="1300" cy="280" r="6" opacity="0.6" />
+    <circle cx="180" cy="600" r="6" opacity="0.55" />
+    <circle cx="1450" cy="900" r="7" opacity="0.6" />
+    <circle cx="500" cy="200" r="6" opacity="0.55" />
+    <circle cx="1180" cy="450" r="5" opacity="0.5" />
   </g>
 </svg>
