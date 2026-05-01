@@ -51,15 +51,28 @@ export function Chapter({ chapter, discoveredIds, onHotspotClick }: Props) {
         <div className="flex-1 min-h-[260px] sm:min-h-[320px] mx-3 sm:mx-6 mb-3 sm:mb-5 mt-1 relative rounded-2xl overflow-hidden ring-1 ring-terracotta/25 shadow-inner">
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${chapter.background})` }}
+            style={{
+              backgroundImage: `url(${chapter.background})`,
+              filter: "saturate(0.82) brightness(1.04)",
+            }}
+            aria-hidden="true"
+          />
+          {/* Soft cream wash to give the aguarela feel and keep hotspots readable */}
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-cream/55 via-peach/40 to-rose/40 mix-blend-soft-light"
             aria-hidden="true"
           />
           <div
-            className="absolute inset-0 bg-gradient-to-br from-cream/40 via-peach/25 to-rose/30 mix-blend-soft-light"
+            className="absolute inset-0 paper opacity-50 mix-blend-multiply"
             aria-hidden="true"
           />
+          {/* Subtle vignette to deepen the corners (improves hotspot contrast) */}
           <div
-            className="absolute inset-0 paper opacity-40 mix-blend-multiply"
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, transparent 55%, rgba(74, 58, 50, 0.18) 100%)",
+            }}
             aria-hidden="true"
           />
 

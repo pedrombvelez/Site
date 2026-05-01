@@ -68,12 +68,12 @@ function RevealBody({
   if (reveal.type === "photo") {
     return (
       <div>
-        <div className="aspect-[3/4] w-full bg-peach">
+        <div className="w-full bg-peach flex items-center justify-center max-h-[70vh] overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={reveal.src}
             alt={reveal.caption ?? label}
-            className="h-full w-full object-cover"
+            className="max-h-[70vh] w-auto max-w-full object-contain"
           />
         </div>
         <div className="px-6 py-4 text-center">

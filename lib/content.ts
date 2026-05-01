@@ -90,8 +90,8 @@ export const CHAPTERS: Chapter[] = [
         reveal: {
           type: "message",
           text:
-            "que íamos ser os melhores pais do mundo, " +
-            "e que tudo seria para o nosso pequeno.",
+            "vamos ser os melhores pais do mundo. " +
+            "Tudo o que fazemos a partir de hoje é para o nosso pequeno.",
         },
       },
     ],
@@ -166,7 +166,7 @@ export const CHAPTERS: Chapter[] = [
     id: 3,
     title: "A chegada",
     subtitle: "o dia em que apareceste",
-    background: bg("chegada-rosa"),
+    background: "/api/asset/3fd29ee5-0597-4c7d-bc63-69bbdf511943.jpeg",
     intro:
       "Chegaste com calma, num momento apressado ao mesmo tempo. " +
       "Eu tive medo, muito medo. Até que te ouvi. " +
@@ -215,7 +215,7 @@ export const CHAPTERS: Chapter[] = [
     id: 4,
     title: "Os primeiros dias",
     subtitle: "noites curtas, colos longos",
-    background: bg("primeiros-dias"),
+    background: "/api/asset/IMG_5945.jpeg",
     intro:
       "A casa cheirava a fralda lavada e a leite morno. " +
       "Tu, mamã, parecias cansada e linda em proporções iguais. " +
@@ -268,7 +268,7 @@ export const CHAPTERS: Chapter[] = [
     id: 5,
     title: "Pequenas conquistas",
     subtitle: "as primeiras vezes",
-    background: bg("conquistas-pastel"),
+    background: "/api/asset/IMG_6138.jpeg",
     intro:
       "Cada dia tem uma estreia. O primeiro Natal. " +
       "A primeira vez com os avós. " +
@@ -319,7 +319,7 @@ export const CHAPTERS: Chapter[] = [
     id: 6,
     title: "Os nossos dias",
     subtitle: "cinco meses inteirinhos",
-    background: bg("rotina-aguarela"),
+    background: "/api/asset/3fb5037f-2bab-4162-bf0a-9bcc9a83cd40.jpeg",
     intro:
       "Mexe-se, agarra coisas, faz-se ouvir quando o pousamos e não quer. " +
       "E tu, mamã, és a paisagem mais bonita destes nossos dias pequeninos.",
@@ -391,7 +391,7 @@ export const CHAPTERS: Chapter[] = [
     id: 7,
     title: "Carta do Pedrinho à mamã",
     subtitle: "para leres devagarinho",
-    background: bg("carta-final"),
+    background: "/api/asset/IMG_5810.jpeg",
     intro:
       "Mamã,\n\n" +
       "Eu ainda não sei falar, mas o pai escreve por mim. " +
