@@ -1,42 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <filter id="b4h" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55" /></filter>
-    <filter id="b4m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10" /></filter>
-    <radialGradient id="moon4" cx="40%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
-      <stop offset="60%" stop-color="#fff6e8" stop-opacity="0.85" />
-      <stop offset="100%" stop-color="#fff6e8" stop-opacity="0" />
-    </radialGradient>
-    <radialGradient id="night4" cx="50%" cy="40%" r="90%">
-      <stop offset="0%" stop-color="#fdf6ee" stop-opacity="0.9" />
-      <stop offset="60%" stop-color="#e8dfe8" stop-opacity="0.55" />
-      <stop offset="100%" stop-color="#cbc1d6" stop-opacity="0.5" />
-    </radialGradient>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8dfe8" />
+      <stop offset="60%" stop-color="#fdf6ee" />
+      <stop offset="100%" stop-color="#fce7e0" />
+    </linearGradient>
+    <mask id="cresc4">
+      <rect width="100%" height="100%" fill="white" />
+      <circle cx="1280" cy="300" r="135" fill="black" />
+    </mask>
   </defs>
-  <rect width="1600" height="1100" fill="#fdf6ee" />
-  <rect width="1600" height="1100" fill="url(#night4)" />
-  <!-- night washes -->
-  <ellipse cx="320" cy="320" rx="400" ry="280" fill="#cbc1d6" opacity="0.55" filter="url(#b4h)" />
-  <ellipse cx="1300" cy="380" rx="450" ry="320" fill="#fce7e0" opacity="0.45" filter="url(#b4h)" />
-  <!-- moon halo -->
-  <circle cx="1230" cy="300" r="240" fill="#fff6e8" opacity="0.45" filter="url(#b4h)" />
-  <!-- moon disc -->
-  <circle cx="1230" cy="300" r="160" fill="url(#moon4)" filter="url(#b4m)" />
-  <!-- crescent shadow (subtle warm glow on right side suggesting crescent) -->
-  <circle cx="1290" cy="280" r="140" fill="#cbc1d6" opacity="0.35" filter="url(#b4m)" />
-  <!-- cradle curve at bottom -->
-  <ellipse cx="800" cy="1080" rx="900" ry="200" fill="#f5c5b8" opacity="0.4" filter="url(#b4h)" />
-  <!-- clearly visible stars -->
-  <g fill="#c9a36a" filter="url(#b4m)">
-    <path d="M 240 170 L 246 188 L 263 192 L 246 196 L 240 214 L 234 196 L 217 192 L 234 188 Z" opacity="0.85" />
-    <path d="M 450 95 L 455 110 L 469 113 L 455 116 L 450 131 L 445 116 L 431 113 L 445 110 Z" opacity="0.75" />
-    <path d="M 640 195 L 646 213 L 663 217 L 646 221 L 640 239 L 634 221 L 617 217 L 634 213 Z" opacity="0.85" />
-    <path d="M 900 130 L 905 145 L 919 148 L 905 151 L 900 166 L 895 151 L 881 148 L 895 145 Z" opacity="0.75" />
-    <path d="M 1080 215 L 1085 230 L 1099 233 L 1085 236 L 1080 251 L 1075 236 L 1061 233 L 1075 230 Z" opacity="0.8" />
-    <circle cx="180" cy="500" r="5" opacity="0.65" />
-    <circle cx="380" cy="660" r="5" opacity="0.65" />
-    <circle cx="700" cy="500" r="6" opacity="0.6" />
-    <circle cx="1450" cy="170" r="5" opacity="0.65" />
-    <circle cx="1100" cy="180" r="5" opacity="0.6" />
+  <rect width="1600" height="1100" fill="url(#bg4)" />
+  <!-- soft cradle / pillow at bottom -->
+  <ellipse cx="800" cy="1080" rx="900" ry="170" fill="#f5c5b8" opacity="0.45" />
+  <!-- crescent moon -->
+  <circle cx="1230" cy="320" r="160" fill="#fff6e8" mask="url(#cresc4)" />
+  <!-- many small stars (constellation) -->
+  <g fill="#c9a36a" opacity="0.85">
+    <path d="M 240 170 L 246 188 L 263 192 L 246 196 L 240 214 L 234 196 L 217 192 L 234 188 Z" />
+    <path d="M 450 95 L 455 110 L 469 113 L 455 116 L 450 131 L 445 116 L 431 113 L 445 110 Z" />
+    <path d="M 640 195 L 646 213 L 663 217 L 646 221 L 640 239 L 634 221 L 617 217 L 634 213 Z" />
+    <path d="M 900 130 L 905 145 L 919 148 L 905 151 L 900 166 L 895 151 L 881 148 L 895 145 Z" />
+    <path d="M 360 380 L 364 392 L 376 395 L 364 398 L 360 410 L 356 398 L 344 395 L 356 392 Z" />
+    <path d="M 580 480 L 584 492 L 596 495 L 584 498 L 580 510 L 576 498 L 564 495 L 576 492 Z" />
+    <path d="M 800 350 L 805 365 L 819 368 L 805 371 L 800 386 L 795 371 L 781 368 L 795 365 Z" />
+    <path d="M 1080 200 L 1086 218 L 1103 222 L 1086 226 L 1080 244 L 1074 226 L 1057 222 L 1074 218 Z" />
+    <path d="M 1450 150 L 1455 165 L 1469 168 L 1455 171 L 1450 186 L 1445 171 L 1431 168 L 1445 165 Z" />
+    <path d="M 280 600 L 284 612 L 296 615 L 284 618 L 280 630 L 276 618 L 264 615 L 276 612 Z" />
+    <path d="M 1100 480 L 1104 492 L 1116 495 L 1104 498 L 1100 510 L 1096 498 L 1084 495 L 1096 492 Z" />
   </g>
 </svg>

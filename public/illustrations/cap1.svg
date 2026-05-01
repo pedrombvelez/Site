@@ -1,40 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <filter id="b1h" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55" /></filter>
-    <filter id="b1m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12" /></filter>
-    <radialGradient id="dawn" cx="76%" cy="34%" r="95%">
-      <stop offset="0%" stop-color="#fff6e8" stop-opacity="1" />
-      <stop offset="50%" stop-color="#fce7e0" stop-opacity="0.7" />
-      <stop offset="100%" stop-color="#fdf6ee" stop-opacity="0.5" />
-    </radialGradient>
-    <radialGradient id="sundisc" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fff6e8" stop-opacity="1" />
-      <stop offset="35%" stop-color="#e6c48d" stop-opacity="0.95" />
-      <stop offset="85%" stop-color="#c9a36a" stop-opacity="0.6" />
-      <stop offset="100%" stop-color="#c9a36a" stop-opacity="0" />
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff6e8" />
+      <stop offset="100%" stop-color="#fce7e0" />
+    </linearGradient>
+    <radialGradient id="sun1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff6e8" />
+      <stop offset="60%" stop-color="#e6c48d" />
+      <stop offset="100%" stop-color="#c9a36a" />
     </radialGradient>
   </defs>
-  <rect width="1600" height="1100" fill="#fdf6ee" />
-  <rect width="1600" height="1100" fill="url(#dawn)" />
-  <!-- background washes -->
-  <ellipse cx="500" cy="700" rx="500" ry="380" fill="#f5c5b8" opacity="0.55" filter="url(#b1h)" />
-  <ellipse cx="350" cy="900" rx="400" ry="220" fill="#d49380" opacity="0.3" filter="url(#b1h)" />
-  <ellipse cx="1320" cy="880" rx="360" ry="260" fill="#fce7e0" opacity="0.6" filter="url(#b1h)" />
-  <!-- Sun: clearly visible glowing disc using radial gradient -->
-  <circle cx="1240" cy="400" r="240" fill="url(#sundisc)" filter="url(#b1m)" />
-  <!-- Sun rays (visible, longer, slight blur) -->
-  <g stroke="#c9a36a" stroke-width="8" stroke-linecap="round" opacity="0.55" filter="url(#b1m)">
-    <line x1="1240" y1="100" x2="1240" y2="180" />
-    <line x1="900" y1="400" x2="980" y2="400" />
-    <line x1="1500" y1="400" x2="1580" y2="400" />
-    <line x1="1010" y1="170" x2="1060" y2="220" />
-    <line x1="1470" y1="170" x2="1420" y2="220" />
-    <line x1="1010" y1="630" x2="1060" y2="580" />
-    <line x1="1470" y1="630" x2="1420" y2="580" />
+  <rect width="1600" height="1100" fill="url(#bg1)" />
+  <!-- soft horizon -->
+  <ellipse cx="800" cy="950" rx="900" ry="140" fill="#f5c5b8" opacity="0.45" />
+  <!-- sun -->
+  <circle cx="1180" cy="380" r="170" fill="url(#sun1)" />
+  <!-- sun rays -->
+  <g stroke="#c9a36a" stroke-width="7" stroke-linecap="round" opacity="0.7">
+    <line x1="1180" y1="120" x2="1180" y2="180" />
+    <line x1="1180" y1="580" x2="1180" y2="640" />
+    <line x1="920" y1="380" x2="980" y2="380" />
+    <line x1="1380" y1="380" x2="1440" y2="380" />
+    <line x1="1010" y1="210" x2="1050" y2="250" />
+    <line x1="1350" y1="210" x2="1310" y2="250" />
+    <line x1="1010" y1="550" x2="1050" y2="510" />
+    <line x1="1350" y1="550" x2="1310" y2="510" />
   </g>
-  <!-- gold star (sparkle of news) -->
-  <g filter="url(#b1m)">
-    <circle cx="640" cy="500" r="40" fill="#c9a36a" opacity="0.18" />
-    <path d="M 640 470 L 650 495 L 675 500 L 650 505 L 640 530 L 630 505 L 605 500 L 630 495 Z" fill="#c9a36a" opacity="0.85" />
-  </g>
+  <!-- decorative star (notícia / sparkle) -->
+  <path d="M 480 600 L 492 632 L 524 640 L 492 648 L 480 680 L 468 648 L 436 640 L 468 632 Z" fill="#c9a36a" opacity="0.85" />
+  <!-- small accent dots -->
+  <circle cx="320" cy="380" r="8" fill="#d49380" opacity="0.6" />
+  <circle cx="700" cy="240" r="6" fill="#c9a36a" opacity="0.65" />
 </svg>

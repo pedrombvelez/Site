@@ -1,38 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <filter id="b2h" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55" /></filter>
-    <filter id="b2m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10" /></filter>
-    <radialGradient id="moonglow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
-      <stop offset="50%" stop-color="#fff6e8" stop-opacity="0.85" />
-      <stop offset="100%" stop-color="#fff6e8" stop-opacity="0" />
-    </radialGradient>
-    <radialGradient id="bg2" cx="50%" cy="60%" r="80%">
-      <stop offset="0%" stop-color="#fce7e0" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#fdf6ee" stop-opacity="0.4" />
-    </radialGradient>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdf6ee" />
+      <stop offset="100%" stop-color="#fce7e0" />
+    </linearGradient>
+    <mask id="cresc2">
+      <rect width="100%" height="100%" fill="white" />
+      <circle cx="1330" cy="320" r="135" fill="black" />
+    </mask>
   </defs>
-  <rect width="1600" height="1100" fill="#fdf6ee" />
   <rect width="1600" height="1100" fill="url(#bg2)" />
-  <!-- background washes -->
-  <ellipse cx="800" cy="780" rx="500" ry="320" fill="#f5c5b8" opacity="0.45" filter="url(#b2h)" />
-  <ellipse cx="200" cy="240" rx="280" ry="200" fill="#a8b89c" opacity="0.32" filter="url(#b2h)" />
-  <ellipse cx="1380" cy="850" rx="320" ry="220" fill="#fce7e0" opacity="0.5" filter="url(#b2h)" />
-  <!-- moon: full glowing disc visible (no white-on-cream issue) -->
-  <circle cx="1260" cy="320" r="260" fill="#fff6e8" opacity="0.4" filter="url(#b2h)" />
-  <circle cx="1260" cy="320" r="150" fill="url(#moonglow)" filter="url(#b2m)" />
-  <!-- crescent shadow: a soft warm shape that creates the crescent feel -->
-  <circle cx="1320" cy="300" r="135" fill="#f5c5b8" opacity="0.55" filter="url(#b2m)" />
-  <!-- belly hint lower-center (round, soft) -->
-  <ellipse cx="800" cy="800" rx="260" ry="200" fill="#f5c5b8" opacity="0.45" filter="url(#b2m)" />
-  <!-- gold dust scattered like a conversation in the dark -->
-  <g fill="#c9a36a" filter="url(#b2m)">
-    <circle cx="450" cy="380" r="8" opacity="0.75" />
-    <circle cx="1100" cy="500" r="7" opacity="0.65" />
-    <circle cx="280" cy="700" r="9" opacity="0.7" />
-    <circle cx="600" cy="200" r="6" opacity="0.55" />
-    <circle cx="980" cy="380" r="6" opacity="0.6" />
-    <circle cx="500" cy="900" r="7" opacity="0.55" />
-    <circle cx="1450" cy="500" r="6" opacity="0.5" />
+  <!-- soft sage hill -->
+  <ellipse cx="200" cy="1000" rx="500" ry="200" fill="#a8b89c" opacity="0.4" />
+  <ellipse cx="1300" cy="1000" rx="500" ry="180" fill="#f5c5b8" opacity="0.5" />
+  <!-- crescent moon (mask gives clean crescent shape) -->
+  <circle cx="1280" cy="340" r="160" fill="#fff6e8" mask="url(#cresc2)" />
+  <!-- soft round belly hint -->
+  <ellipse cx="800" cy="800" rx="220" ry="170" fill="#f5c5b8" opacity="0.55" />
+  <ellipse cx="800" cy="800" rx="160" ry="120" fill="#fce7e0" opacity="0.6" />
+  <!-- stars -->
+  <g fill="#c9a36a" opacity="0.8">
+    <path d="M 360 230 L 366 246 L 382 250 L 366 254 L 360 270 L 354 254 L 338 250 L 354 246 Z" />
+    <path d="M 600 420 L 604 432 L 616 435 L 604 438 L 600 450 L 596 438 L 584 435 L 596 432 Z" />
+    <path d="M 1000 160 L 1006 176 L 1022 180 L 1006 184 L 1000 200 L 994 184 L 978 180 L 994 176 Z" />
+    <path d="M 1080 540 L 1084 552 L 1096 555 L 1084 558 L 1080 570 L 1076 558 L 1064 555 L 1076 552 Z" />
+    <path d="M 480 580 L 484 592 L 496 595 L 484 598 L 480 610 L 476 598 L 464 595 L 476 592 Z" />
   </g>
 </svg>

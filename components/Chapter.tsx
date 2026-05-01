@@ -47,25 +47,11 @@ export function Chapter({ chapter, discoveredIds, onHotspotClick }: Props) {
           )}
         </motion.div>
 
-        {/* SCENE ZONE — watercolor area where the hotspots live */}
+        {/* SCENE ZONE — illustrated area where the hotspots live */}
         <div className="flex-1 min-h-[260px] sm:min-h-[320px] mx-3 sm:mx-6 mb-3 sm:mb-5 mt-1 relative rounded-2xl overflow-hidden ring-1 ring-terracotta/25 shadow-inner">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${chapter.background})` }}
-            aria-hidden="true"
-          />
-          {/* Light paper texture over the SVG aguarela */}
-          <div
-            className="absolute inset-0 paper opacity-30 mix-blend-multiply"
-            aria-hidden="true"
-          />
-          {/* Subtle vignette to deepen the corners and keep hotspots readable */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(ellipse at center, transparent 60%, rgba(74, 58, 50, 0.14) 100%)",
-            }}
             aria-hidden="true"
           />
 

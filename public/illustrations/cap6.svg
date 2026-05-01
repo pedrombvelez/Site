@@ -1,60 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <filter id="b6h" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55" /></filter>
-    <filter id="b6m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="8" /></filter>
-    <radialGradient id="day6" cx="50%" cy="50%" r="75%">
-      <stop offset="0%" stop-color="#fff6e8" stop-opacity="0.85" />
-      <stop offset="100%" stop-color="#fdf6ee" stop-opacity="0.45" />
-    </radialGradient>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff6e8" />
+      <stop offset="50%" stop-color="#fce7e0" />
+      <stop offset="100%" stop-color="#f5c5b8" />
+    </linearGradient>
   </defs>
-  <rect width="1600" height="1100" fill="#fdf6ee" />
-  <rect width="1600" height="1100" fill="url(#day6)" />
-  <!-- four soft watercolor blooms in different palette colors -->
-  <ellipse cx="350" cy="320" rx="380" ry="280" fill="#fce7e0" opacity="0.7" filter="url(#b6h)" />
-  <ellipse cx="1280" cy="320" rx="420" ry="300" fill="#f5c5b8" opacity="0.55" filter="url(#b6h)" />
-  <ellipse cx="280" cy="820" rx="360" ry="280" fill="#a8b89c" opacity="0.4" filter="url(#b6h)" />
-  <ellipse cx="1320" cy="820" rx="380" ry="300" fill="#fff6e8" opacity="0.65" filter="url(#b6h)" />
-  <!-- petals: 5-petal flower sprigs (clearly visible) -->
-  <g filter="url(#b6m)">
-    <!-- daisy 1 -->
-    <g transform="translate(450 260)">
-      <ellipse cx="0" cy="-30" rx="14" ry="26" fill="#d49380" opacity="0.7" />
-      <ellipse cx="0" cy="-30" rx="14" ry="26" fill="#d49380" opacity="0.7" transform="rotate(72)" />
-      <ellipse cx="0" cy="-30" rx="14" ry="26" fill="#d49380" opacity="0.7" transform="rotate(144)" />
-      <ellipse cx="0" cy="-30" rx="14" ry="26" fill="#d49380" opacity="0.7" transform="rotate(216)" />
-      <ellipse cx="0" cy="-30" rx="14" ry="26" fill="#d49380" opacity="0.7" transform="rotate(288)" />
-      <circle r="11" fill="#c9a36a" opacity="0.95" />
-    </g>
-    <!-- daisy 2 -->
-    <g transform="translate(1180 580)">
-      <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#f5c5b8" opacity="0.85" />
-      <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#f5c5b8" opacity="0.85" transform="rotate(72)" />
-      <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#f5c5b8" opacity="0.85" transform="rotate(144)" />
-      <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#f5c5b8" opacity="0.85" transform="rotate(216)" />
-      <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#f5c5b8" opacity="0.85" transform="rotate(288)" />
-      <circle r="9" fill="#c9a36a" opacity="0.95" />
-    </g>
-    <!-- daisy 3 -->
-    <g transform="translate(260 660)">
-      <ellipse cx="0" cy="-22" rx="10" ry="18" fill="#fce7e0" opacity="0.95" />
-      <ellipse cx="0" cy="-22" rx="10" ry="18" fill="#fce7e0" opacity="0.95" transform="rotate(72)" />
-      <ellipse cx="0" cy="-22" rx="10" ry="18" fill="#fce7e0" opacity="0.95" transform="rotate(144)" />
-      <ellipse cx="0" cy="-22" rx="10" ry="18" fill="#fce7e0" opacity="0.95" transform="rotate(216)" />
-      <ellipse cx="0" cy="-22" rx="10" ry="18" fill="#fce7e0" opacity="0.95" transform="rotate(288)" />
-      <circle r="8" fill="#c9a36a" opacity="0.95" />
-    </g>
-    <!-- daisy 4 -->
-    <g transform="translate(1380 280)">
-      <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#d49380" opacity="0.65" />
-      <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#d49380" opacity="0.65" transform="rotate(72)" />
-      <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#d49380" opacity="0.65" transform="rotate(144)" />
-      <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#d49380" opacity="0.65" transform="rotate(216)" />
-      <ellipse cx="0" cy="-26" rx="12" ry="22" fill="#d49380" opacity="0.65" transform="rotate(288)" />
-      <circle r="9" fill="#c9a36a" opacity="0.95" />
-    </g>
-    <!-- floating loose petals -->
-    <ellipse cx="800" cy="160" rx="14" ry="7" fill="#d49380" opacity="0.55" transform="rotate(35 800 160)" />
-    <ellipse cx="700" cy="900" rx="16" ry="8" fill="#d49380" opacity="0.55" transform="rotate(-25 700 900)" />
-    <ellipse cx="1000" cy="940" rx="14" ry="7" fill="#d49380" opacity="0.5" transform="rotate(20 1000 940)" />
+  <rect width="1600" height="1100" fill="url(#bg6)" />
+  <!-- corner pastel blooms -->
+  <ellipse cx="100" cy="100" rx="320" ry="220" fill="#fff6e8" opacity="0.7" />
+  <ellipse cx="1500" cy="1000" rx="320" ry="220" fill="#a8b89c" opacity="0.32" />
+  <!-- daisies (clean flat 5-petal flowers) -->
+  <!-- daisy 1 (large, upper-left) -->
+  <g transform="translate(420 280)">
+    <ellipse cx="0" cy="-46" rx="20" ry="42" fill="#fdf6ee" stroke="#d49380" stroke-width="3" />
+    <ellipse cx="0" cy="-46" rx="20" ry="42" fill="#fdf6ee" stroke="#d49380" stroke-width="3" transform="rotate(72)" />
+    <ellipse cx="0" cy="-46" rx="20" ry="42" fill="#fdf6ee" stroke="#d49380" stroke-width="3" transform="rotate(144)" />
+    <ellipse cx="0" cy="-46" rx="20" ry="42" fill="#fdf6ee" stroke="#d49380" stroke-width="3" transform="rotate(216)" />
+    <ellipse cx="0" cy="-46" rx="20" ry="42" fill="#fdf6ee" stroke="#d49380" stroke-width="3" transform="rotate(288)" />
+    <circle r="18" fill="#c9a36a" />
+  </g>
+  <!-- daisy 2 (medium, right) -->
+  <g transform="translate(1180 380)">
+    <ellipse cx="0" cy="-38" rx="16" ry="34" fill="#fdf6ee" stroke="#d49380" stroke-width="3" />
+    <ellipse cx="0" cy="-38" rx="16" ry="34" fill="#fdf6ee" stroke="#d49380" stroke-width="3" transform="rotate(72)" />
+    <ellipse cx="0" cy="-38" rx="16" ry="34" fill="#fdf6ee" stroke="#d49380" stroke-width="3" transform="rotate(144)" />
+    <ellipse cx="0" cy="-38" rx="16" ry="34" fill="#fdf6ee" stroke="#d49380" stroke-width="3" transform="rotate(216)" />
+    <ellipse cx="0" cy="-38" rx="16" ry="34" fill="#fdf6ee" stroke="#d49380" stroke-width="3" transform="rotate(288)" />
+    <circle r="14" fill="#c9a36a" />
+  </g>
+  <!-- daisy 3 (medium, lower-left) -->
+  <g transform="translate(280 780)">
+    <ellipse cx="0" cy="-38" rx="16" ry="34" fill="#fce7e0" stroke="#b4715e" stroke-width="3" />
+    <ellipse cx="0" cy="-38" rx="16" ry="34" fill="#fce7e0" stroke="#b4715e" stroke-width="3" transform="rotate(72)" />
+    <ellipse cx="0" cy="-38" rx="16" ry="34" fill="#fce7e0" stroke="#b4715e" stroke-width="3" transform="rotate(144)" />
+    <ellipse cx="0" cy="-38" rx="16" ry="34" fill="#fce7e0" stroke="#b4715e" stroke-width="3" transform="rotate(216)" />
+    <ellipse cx="0" cy="-38" rx="16" ry="34" fill="#fce7e0" stroke="#b4715e" stroke-width="3" transform="rotate(288)" />
+    <circle r="14" fill="#c9a36a" />
+  </g>
+  <!-- daisy 4 (small, lower-right) -->
+  <g transform="translate(1300 800)">
+    <ellipse cx="0" cy="-32" rx="14" ry="28" fill="#fdf6ee" stroke="#d49380" stroke-width="3" />
+    <ellipse cx="0" cy="-32" rx="14" ry="28" fill="#fdf6ee" stroke="#d49380" stroke-width="3" transform="rotate(72)" />
+    <ellipse cx="0" cy="-32" rx="14" ry="28" fill="#fdf6ee" stroke="#d49380" stroke-width="3" transform="rotate(144)" />
+    <ellipse cx="0" cy="-32" rx="14" ry="28" fill="#fdf6ee" stroke="#d49380" stroke-width="3" transform="rotate(216)" />
+    <ellipse cx="0" cy="-32" rx="14" ry="28" fill="#fdf6ee" stroke="#d49380" stroke-width="3" transform="rotate(288)" />
+    <circle r="12" fill="#c9a36a" />
+  </g>
+  <!-- floating loose petals -->
+  <g fill="#d49380" opacity="0.75">
+    <ellipse cx="800" cy="180" rx="16" ry="8" transform="rotate(35 800 180)" />
+    <ellipse cx="700" cy="940" rx="18" ry="9" transform="rotate(-25 700 940)" />
+    <ellipse cx="1000" cy="980" rx="16" ry="8" transform="rotate(20 1000 980)" />
+  </g>
+  <!-- accent leaves -->
+  <g fill="#a8b89c" opacity="0.7">
+    <ellipse cx="600" cy="500" rx="22" ry="8" transform="rotate(-30 600 500)" />
+    <ellipse cx="1050" cy="600" rx="22" ry="8" transform="rotate(30 1050 600)" />
   </g>
 </svg>

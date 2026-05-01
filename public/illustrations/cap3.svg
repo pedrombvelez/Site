@@ -1,42 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <filter id="b3h" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55" /></filter>
-    <filter id="b3m" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12" /></filter>
-    <linearGradient id="rise" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fff6e8" stop-opacity="1" />
-      <stop offset="50%" stop-color="#fce7e0" stop-opacity="0.7" />
-      <stop offset="100%" stop-color="#f5c5b8" stop-opacity="0.55" />
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff6e8" />
+      <stop offset="60%" stop-color="#fce7e0" />
+      <stop offset="100%" stop-color="#f5c5b8" />
     </linearGradient>
     <radialGradient id="sun3" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fff6e8" stop-opacity="1" />
-      <stop offset="40%" stop-color="#e6c48d" stop-opacity="0.95" />
-      <stop offset="85%" stop-color="#c9a36a" stop-opacity="0.5" />
-      <stop offset="100%" stop-color="#c9a36a" stop-opacity="0" />
+      <stop offset="0%" stop-color="#fff6e8" />
+      <stop offset="55%" stop-color="#e6c48d" />
+      <stop offset="100%" stop-color="#c9a36a" />
     </radialGradient>
   </defs>
-  <rect width="1600" height="1100" fill="#fdf6ee" />
-  <rect width="1600" height="1100" fill="url(#rise)" />
+  <rect width="1600" height="1100" fill="url(#bg3)" />
   <!-- horizon glow -->
-  <ellipse cx="800" cy="700" rx="900" ry="260" fill="#fff6e8" opacity="0.85" filter="url(#b3h)" />
-  <!-- sun (clearly visible glowing disc) -->
-  <circle cx="800" cy="640" r="220" fill="url(#sun3)" filter="url(#b3m)" />
-  <!-- rays radiating from sun -->
-  <g stroke="#c9a36a" stroke-width="9" stroke-linecap="round" opacity="0.5" filter="url(#b3m)">
-    <line x1="800" y1="320" x2="800" y2="400" />
-    <line x1="450" y1="640" x2="530" y2="640" />
-    <line x1="1070" y1="640" x2="1150" y2="640" />
-    <line x1="560" y1="430" x2="610" y2="480" />
-    <line x1="1040" y1="430" x2="990" y2="480" />
-    <line x1="320" y1="500" x2="380" y2="540" />
-    <line x1="1280" y1="500" x2="1220" y2="540" />
-    <line x1="800" y1="900" x2="800" y2="850" />
+  <ellipse cx="800" cy="780" rx="900" ry="180" fill="#fff6e8" opacity="0.7" />
+  <!-- big sun (centred, clearly visible) -->
+  <circle cx="800" cy="600" r="220" fill="url(#sun3)" />
+  <!-- rays -->
+  <g stroke="#c9a36a" stroke-width="9" stroke-linecap="round" opacity="0.65">
+    <line x1="800" y1="270" x2="800" y2="350" />
+    <line x1="430" y1="600" x2="510" y2="600" />
+    <line x1="1090" y1="600" x2="1170" y2="600" />
+    <line x1="540" y1="370" x2="595" y2="425" />
+    <line x1="1060" y1="370" x2="1005" y2="425" />
+    <line x1="540" y1="830" x2="595" y2="775" />
+    <line x1="1060" y1="830" x2="1005" y2="775" />
   </g>
-  <!-- side cloud washes -->
-  <ellipse cx="180" cy="430" rx="240" ry="160" fill="#fce7e0" opacity="0.6" filter="url(#b3h)" />
-  <ellipse cx="1450" cy="400" rx="260" ry="170" fill="#f5c5b8" opacity="0.5" filter="url(#b3h)" />
+  <!-- horizon line -->
+  <line x1="100" y1="800" x2="1500" y2="800" stroke="#d49380" stroke-width="3" stroke-linecap="round" opacity="0.35" />
   <!-- morning star -->
-  <g filter="url(#b3m)">
-    <circle cx="280" cy="180" r="22" fill="#c9a36a" opacity="0.25" />
-    <path d="M 280 158 L 287 178 L 305 180 L 287 184 L 280 204 L 273 184 L 255 180 L 273 178 Z" fill="#c9a36a" opacity="0.9" />
+  <path d="M 280 200 L 288 224 L 312 230 L 288 236 L 280 260 L 272 236 L 248 230 L 272 224 Z" fill="#c9a36a" opacity="0.85" />
+  <!-- accent flying birds (V shapes) -->
+  <g stroke="#b4715e" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6">
+    <path d="M 1200 280 q 20 -18 40 0 q 20 -18 40 0" />
+    <path d="M 1320 200 q 14 -12 28 0 q 14 -12 28 0" />
   </g>
 </svg>
