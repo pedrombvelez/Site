@@ -36,6 +36,9 @@ export type Chapter = {
 // Pequeno helper para fundos placeholder consistentes (picsum com seed)
 const bg = (seed: string) =>
   `https://picsum.photos/seed/${seed}/1600/1100?grayscale&blur=1`;
+// (mantido apenas para uso futuro caso queiras voltar a placeholders;
+//  os capítulos abaixo usam SVGs aguarela em /illustrations/)
+void bg;
 
 export const BOOK_TITLE = "Para a mamã do Pedrinho";
 export const BOOK_SUBTITLE = "um livro pequenino, com muito amor";
@@ -46,7 +49,7 @@ export const CHAPTERS: Chapter[] = [
     id: 1,
     title: "A notícia",
     subtitle: "o dia em que tudo começou",
-    background: bg("noticia-pastel"),
+    background: "/illustrations/cap1.svg",
     intro:
       "Houve um dia, sem aviso, em que uma cruz mudou o mundo. " +
       "Tu sorriste de uma maneira diferente. Eu chorei de uma maneira diferente. " +
@@ -100,7 +103,7 @@ export const CHAPTERS: Chapter[] = [
     id: 2,
     title: "A espera",
     subtitle: "nove meses, mil conversas",
-    background: bg("espera-aguarela"),
+    background: "/illustrations/cap2.svg",
     intro:
       "A barriga começou a ser uma casa. Falávamos contigo todas as noites — " +
       "tu respondias com pontapés certeiros, sempre que eu me enganava no teu nome. " +
@@ -166,7 +169,7 @@ export const CHAPTERS: Chapter[] = [
     id: 3,
     title: "A chegada",
     subtitle: "o dia em que apareceste",
-    background: "/api/asset/3fd29ee5-0597-4c7d-bc63-69bbdf511943.jpeg",
+    background: "/illustrations/cap3.svg",
     intro:
       "Chegaste com calma, num momento apressado ao mesmo tempo. " +
       "Eu tive medo, muito medo. Até que te ouvi. " +
@@ -215,7 +218,7 @@ export const CHAPTERS: Chapter[] = [
     id: 4,
     title: "Os primeiros dias",
     subtitle: "noites curtas, colos longos",
-    background: "/api/asset/IMG_5945.jpeg",
+    background: "/illustrations/cap4.svg",
     intro:
       "A casa cheirava a fralda lavada e a leite morno. " +
       "Tu, mamã, parecias cansada e linda em proporções iguais. " +
@@ -268,7 +271,7 @@ export const CHAPTERS: Chapter[] = [
     id: 5,
     title: "Pequenas conquistas",
     subtitle: "as primeiras vezes",
-    background: "/api/asset/IMG_6138.jpeg",
+    background: "/illustrations/cap5.svg",
     intro:
       "Cada dia tem uma estreia. O primeiro Natal. " +
       "A primeira vez com os avós. " +
@@ -319,7 +322,7 @@ export const CHAPTERS: Chapter[] = [
     id: 6,
     title: "Os nossos dias",
     subtitle: "cinco meses inteirinhos",
-    background: "/api/asset/3fb5037f-2bab-4162-bf0a-9bcc9a83cd40.jpeg",
+    background: "/illustrations/cap6.svg",
     intro:
       "Mexe-se, agarra coisas, faz-se ouvir quando o pousamos e não quer. " +
       "E tu, mamã, és a paisagem mais bonita destes nossos dias pequeninos.",
@@ -391,7 +394,7 @@ export const CHAPTERS: Chapter[] = [
     id: 7,
     title: "Carta do Pedrinho à mamã",
     subtitle: "para leres devagarinho",
-    background: "/api/asset/IMG_5810.jpeg",
+    background: "/illustrations/cap7.svg",
     intro:
       "Mamã,\n\n" +
       "Eu ainda não sei falar, mas o pai escreve por mim. " +

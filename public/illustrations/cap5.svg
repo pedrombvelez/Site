@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <filter id="b5" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="75" />
+    </filter>
+    <radialGradient id="festive" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#fff3e0" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#fdf6ee" stop-opacity="0.4" />
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="#fdf6ee" />
+  <rect width="1600" height="1100" fill="url(#festive)" />
+  <!-- sage/green washes (festive but not red) -->
+  <ellipse cx="280" cy="360" rx="420" ry="320" fill="#a8b89c" filter="url(#b5)" opacity="0.5" />
+  <ellipse cx="1380" cy="700" rx="440" ry="340" fill="#a8b89c" filter="url(#b5)" opacity="0.4" />
+  <!-- pine tree silhouette very faded -->
+  <g filter="url(#b5)" opacity="0.35">
+    <polygon points="800,250 700,500 760,500 680,700 820,700 740,900 920,900 840,700 980,700 900,500 960,500 840,250" fill="#6a8076" />
+  </g>
+  <!-- gold star above tree -->
+  <g filter="url(#b5)" opacity="0.7">
+    <circle cx="800" cy="200" r="50" fill="#c9a36a" />
+  </g>
+  <!-- gold ornaments scattered -->
+  <g fill="#c9a36a">
+    <circle cx="280" cy="780" r="8" opacity="0.6" />
+    <circle cx="450" cy="900" r="6" opacity="0.5" />
+    <circle cx="1180" cy="220" r="7" opacity="0.55" />
+    <circle cx="1320" cy="320" r="6" opacity="0.5" />
+    <circle cx="1100" cy="950" r="9" opacity="0.65" />
+  </g>
+  <!-- warm blush wash -->
+  <ellipse cx="800" cy="1050" rx="1000" ry="180" fill="#f5c5b8" filter="url(#b5)" opacity="0.35" />
+</svg>

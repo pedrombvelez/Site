@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <filter id="b1" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="75" />
+    </filter>
+    <radialGradient id="dawn" cx="78%" cy="22%" r="60%">
+      <stop offset="0%" stop-color="#fff3e0" stop-opacity="0.95" />
+      <stop offset="60%" stop-color="#fce7e0" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#fdf6ee" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="#fdf6ee" />
+  <rect width="1600" height="1100" fill="url(#dawn)" />
+  <ellipse cx="1100" cy="320" rx="640" ry="420" fill="#fce7e0" filter="url(#b1)" opacity="0.85" />
+  <ellipse cx="430" cy="640" rx="520" ry="380" fill="#f5c5b8" filter="url(#b1)" opacity="0.55" />
+  <ellipse cx="1280" cy="180" rx="160" ry="160" fill="#c9a36a" filter="url(#b1)" opacity="0.4" />
+  <ellipse cx="380" cy="900" rx="380" ry="240" fill="#d49380" filter="url(#b1)" opacity="0.22" />
+  <ellipse cx="900" cy="500" rx="220" ry="220" fill="#fff3e0" filter="url(#b1)" opacity="0.7" />
+</svg>

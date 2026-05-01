@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <filter id="b4" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="80" />
+    </filter>
+    <radialGradient id="night" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#fdf6ee" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#e8dfe8" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#cbc1d6" stop-opacity="0.45" />
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="#fdf6ee" />
+  <rect width="1600" height="1100" fill="url(#night)" />
+  <!-- soft lavender/peach washes for the night sky -->
+  <ellipse cx="320" cy="280" rx="540" ry="380" fill="#cbc1d6" filter="url(#b4)" opacity="0.55" />
+  <ellipse cx="1300" cy="350" rx="500" ry="360" fill="#fce7e0" filter="url(#b4)" opacity="0.55" />
+  <!-- crescent moon -->
+  <g filter="url(#b4)" opacity="0.85">
+    <circle cx="1250" cy="280" r="170" fill="#fff3e0" />
+    <circle cx="1310" cy="260" r="150" fill="#e8dfe8" />
+  </g>
+  <!-- cradle-curve at bottom -->
+  <ellipse cx="800" cy="1050" rx="900" ry="220" fill="#f5c5b8" filter="url(#b4)" opacity="0.4" />
+  <!-- tiny stars -->
+  <g fill="#c9a36a">
+    <circle cx="240" cy="180" r="4" opacity="0.8" />
+    <circle cx="450" cy="100" r="3" opacity="0.7" />
+    <circle cx="640" cy="180" r="4" opacity="0.8" />
+    <circle cx="900" cy="120" r="3" opacity="0.6" />
+    <circle cx="1100" cy="200" r="3" opacity="0.7" />
+    <circle cx="1450" cy="120" r="4" opacity="0.7" />
+    <circle cx="180" cy="500" r="3" opacity="0.55" />
+    <circle cx="400" cy="700" r="3" opacity="0.6" />
+  </g>
+</svg>
