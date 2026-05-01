@@ -61,10 +61,9 @@ export const CHAPTERS: Chapter[] = [
         icon: "sparkle",
         label: "O teste",
         reveal: {
-          type: "message",
-          text:
-            "Uma cruz. Foi assim que soubemos. " +
-            "Pequenina, mas suficiente para mudar, para sempre, o mapa do mundo.",
+          type: "photo",
+          src: "/api/asset/3d22dc72-d076-4939-958f-f9f58b3c8fb3.jpeg",
+          caption: "A cruz que mudou o mundo.",
         },
       },
       {
