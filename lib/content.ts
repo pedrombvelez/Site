@@ -48,8 +48,9 @@ export const CHAPTERS: Chapter[] = [
     subtitle: "o dia em que tudo começou",
     background: bg("noticia-pastel"),
     intro:
-      "Houve um dia, sem aviso, em que duas linhas mudaram o mundo. " +
+      "Houve um dia, sem aviso, em que uma cruz mudou o mundo. " +
       "Tu sorriste de uma maneira diferente. Eu chorei de uma maneira diferente. " +
+      "Com medo e com esperança. " +
       "E a casa, sem fazer barulho, ficou para sempre maior.",
     note: "clica nos pontinhos da página para descobrires...",
     hotspots: [
@@ -102,45 +103,61 @@ export const CHAPTERS: Chapter[] = [
     background: bg("espera-aguarela"),
     intro:
       "A barriga começou a ser uma casa. Falávamos contigo todas as noites — " +
-      "tu respondias com pontapés certeiros, sempre que eu cantava mal. " +
-      "A mamã andava radiante, e o mundo parecia preparar-se para te receber.",
-    note: "três coisas escondidas nesta página",
+      "tu respondias com pontapés certeiros, sempre que eu me enganava no teu nome. " +
+      "A mamã corajosa a enfrentar tudo, por ti.",
+    note: "quatro coisas escondidas nesta página",
     hotspots: [
       {
         id: "c2-h1",
-        x: 30,
-        y: 28,
+        x: 25,
+        y: 25,
         icon: "moon",
-        label: "A primeira ecografia",
+        label: "A ecografia",
         reveal: {
           type: "photo",
           src: "https://picsum.photos/seed/ecografia/900/1200",
-          caption: "Olá, feijãozinho. (substituir pela ecografia real)",
+          caption: "Olá, Mirtilo.",
         },
       },
       {
         id: "c2-h2",
         x: 75,
-        y: 55,
+        y: 28,
         icon: "flower",
         label: "Barriga em flor",
         reveal: {
           type: "photo",
           src: "https://picsum.photos/seed/barriga/900/1200",
-          caption: "A casa onde o Pedrinho viveu primeiro.",
+          caption:
+            "A casa onde o Pedrinho viveu quando gostava de se vestir de Matilde.",
         },
       },
       {
         id: "c2-h3",
-        x: 48,
-        y: 78,
+        x: 50,
+        y: 55,
+        icon: "sparkle",
+        label: "Os teus pontapés",
+        reveal: {
+          type: "video",
+          src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+          caption:
+            "(troca por um vídeo dos pontapés do Pedrinho na barriga)",
+        },
+      },
+      {
+        id: "c2-h4",
+        x: 50,
+        y: 80,
         icon: "heart",
         label: "Carta à barriga",
         reveal: {
           type: "message",
           text:
             "Falávamos contigo todas as noites. Tu não sabes, " +
-            "mas a mamã passava as mãos pela barriga como quem afaga o universo. " +
+            "mas a mamã passou por tudo durante a gravidez. " +
+            "Sempre que passava a mão pela barriga, " +
+            "sabia que tudo ia valer a pena. " +
             "Acho que aprendeste a amá-la antes de aprenderes a respirar.",
         },
       },
@@ -152,15 +169,16 @@ export const CHAPTERS: Chapter[] = [
     subtitle: "o dia em que apareceste",
     background: bg("chegada-rosa"),
     intro:
-      "Chegaste com pressa e com calma, ao mesmo tempo. " +
-      "Eu olhei primeiro para ti — minúsculo, perfeito — e logo a seguir para ela. " +
+      "Chegaste com calma, num momento apressado ao mesmo tempo. " +
+      "Eu tive medo, muito medo. Até que te ouvi. " +
+      "Eu olhei primeiro para ti — minúsculo, perfeito — e só mais tarde para ela. " +
       "E percebi, naquele segundo, que tinha duas vidas para proteger para sempre.",
     note: "três descobertas",
     hotspots: [
       {
         id: "c3-h1",
         x: 28,
-        y: 40,
+        y: 32,
         icon: "sun",
         label: "A primeira foto",
         reveal: {
@@ -171,15 +189,13 @@ export const CHAPTERS: Chapter[] = [
       },
       {
         id: "c3-h2",
-        x: 65,
+        x: 70,
         y: 32,
         icon: "star",
         label: "Hora, peso, milagre",
         reveal: {
           type: "message",
-          text:
-            "Pedrinho • [hora] • [peso] • [comprimento]\n" +
-            "(edita estes valores em lib/content.ts — ficam aqui guardados como o bilhete da tua maternidade)",
+          text: "Pedrinho • 15:24 • 2,7 kg • 47 cm",
         },
       },
       {
@@ -187,12 +203,11 @@ export const CHAPTERS: Chapter[] = [
         x: 50,
         y: 75,
         icon: "heart",
-        label: "Vídeo do hospital",
+        label: "Beijinho",
         reveal: {
-          type: "video",
-          src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-          caption:
-            "(substituir por um vídeo curto do hospital — em /public/media/hospital.mp4)",
+          type: "photo",
+          src: "https://picsum.photos/seed/beijinho/900/1200",
+          caption: "(troca pela foto a mandar um beijinho)",
         },
       },
     ],
@@ -217,7 +232,7 @@ export const CHAPTERS: Chapter[] = [
         reveal: {
           type: "photo",
           src: "https://picsum.photos/seed/colo/900/1200",
-          caption: "Cabias todo num antebraço.",
+          caption: "Sem saberes, já eras feliz.",
         },
       },
       {
@@ -225,11 +240,11 @@ export const CHAPTERS: Chapter[] = [
         x: 72,
         y: 48,
         icon: "flower",
-        label: "Primeiro banho",
+        label: "Hora do banho",
         reveal: {
-          type: "photo",
-          src: "https://picsum.photos/seed/primeiro-banho/900/1200",
-          caption: "Cara de quem estava a julgar a temperatura.",
+          type: "video",
+          src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+          caption: "(troca por um vídeo de um banho — mas não o primeiro)",
         },
       },
       {
@@ -242,8 +257,9 @@ export const CHAPTERS: Chapter[] = [
           type: "message",
           text:
             "Tu eras incrível e nem sabias. " +
-            "Davas peito de noite, cantavas baixinho, e ainda tinhas força para sorrir " +
-            "quando eu te trazia a sopa fria. Eu vi tudo. Eu lembro-me de tudo.",
+            "Davas mama de noite, fazias shhh baixinho, " +
+            "e ainda tinhas força para sorrir quando eu te dizia que te amo. " +
+            "Eu vi tudo. Eu lembro-me de tudo.",
           signature: "— para sempre, o teu",
         },
       },
@@ -252,50 +268,50 @@ export const CHAPTERS: Chapter[] = [
   {
     id: 5,
     title: "Pequenas conquistas",
-    subtitle: "primeiros sorrisos, primeiras gargalhadas",
+    subtitle: "as primeiras vezes",
     background: bg("conquistas-pastel"),
     intro:
-      "Cada dia trazia uma estreia. O primeiro sorriso (foi para ti, claro). " +
-      "A primeira gargalhada (foi quando o pai fez de cão). " +
-      "A primeira noite a dormir seguida (essa, choraste tu de alegria, mamã).",
+      "Cada dia tem uma estreia. O primeiro Natal. " +
+      "A primeira vez com os avós. " +
+      "Aquela vez que fiquei a dormir seguido até às 4 da manhã.",
     note: "três conquistas escondidas",
     hotspots: [
       {
         id: "c5-h1",
         x: 28,
         y: 32,
-        icon: "sun",
-        label: "Primeiro sorriso",
+        icon: "sparkle",
+        label: "Primeiro Natal",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/sorriso/900/1200",
-          caption: "(substituir por foto do primeiro sorriso)",
+          src: "https://picsum.photos/seed/natal/900/1200",
+          caption: "(troca pela foto do primeiro Natal)",
         },
       },
       {
         id: "c5-h2",
         x: 70,
-        y: 55,
-        icon: "sparkle",
-        label: "Primeira gargalhada",
+        y: 32,
+        icon: "sun",
+        label: "Com os avós",
         reveal: {
-          type: "video",
-          src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-          caption: "(troca por /media/gargalhada.mp4 quando tiveres)",
+          type: "photo",
+          src: "https://picsum.photos/seed/avos/900/1200",
+          caption: "(troca pela foto com os avós maternos)",
         },
       },
       {
         id: "c5-h3",
         x: 50,
-        y: 80,
+        y: 75,
         icon: "star",
-        label: "A primeira noite inteira",
+        label: "Os meus pequenos passos",
         reveal: {
           type: "message",
           text:
-            "Acordaste com o sol em vez de à uma da manhã. " +
-            "Tu, mamã, abriste os olhos, olhaste para o relógio, e disseste, baixinho: " +
-            "«acho que ele me ama mesmo». E eu pensei: pois claro que sim.",
+            "Todos os pequenos passos que tenho dado, " +
+            "sempre contigo a encorajar-me a enfrentar o mundo. " +
+            "Sempre ao meu lado, mamã.",
         },
       },
     ],
@@ -306,45 +322,68 @@ export const CHAPTERS: Chapter[] = [
     subtitle: "cinco meses inteirinhos",
     background: bg("rotina-aguarela"),
     intro:
-      "Hoje o Pedrinho tem cinco meses. " +
-      "Mexe-se, agarra coisas, faz som de avião quando come. " +
+      "Mexe-se, agarra coisas, faz-se ouvir quando o pousamos e não quer. " +
       "E tu, mamã, és a paisagem mais bonita destes nossos dias pequeninos.",
-    note: "três momentos do dia-a-dia",
+    note: "cinco momentos escondidos",
     hotspots: [
       {
         id: "c6-h1",
-        x: 25,
-        y: 30,
-        icon: "leaf",
-        label: "Hora de brincar",
+        x: 22,
+        y: 25,
+        icon: "moon",
+        label: "Hora de dormir",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/brincar/900/1200",
-          caption: "O móbile continua imbatível.",
+          src: "https://picsum.photos/seed/dormir-1/900/1200",
+          caption: "Hora de dormir.",
         },
       },
       {
         id: "c6-h2",
-        x: 72,
-        y: 45,
-        icon: "flower",
-        label: "Hora do banho",
+        x: 50,
+        y: 22,
+        icon: "star",
+        label: "Hora de dormir outra vez",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/banho/900/1200",
-          caption: "Esponja em forma de pato. Sempre.",
+          src: "https://picsum.photos/seed/dormir-2/900/1200",
+          caption: "Hora de dormir outra vez.",
         },
       },
       {
         id: "c6-h3",
-        x: 48,
-        y: 75,
-        icon: "moon",
-        label: "Sesta no peito da mamã",
+        x: 78,
+        y: 25,
+        icon: "sun",
+        label: "Hora de acordar a mamã",
         reveal: {
           type: "photo",
-          src: "https://picsum.photos/seed/sesta/900/1200",
-          caption: "O sítio mais seguro do mundo.",
+          src: "https://picsum.photos/seed/acordar/900/1200",
+          caption: "Hora de acordar a mamã.",
+        },
+      },
+      {
+        id: "c6-h4",
+        x: 33,
+        y: 72,
+        icon: "heart",
+        label: "Hora de dormir com a mamã",
+        reveal: {
+          type: "photo",
+          src: "https://picsum.photos/seed/dormir-mae/900/1200",
+          caption: "Hora de dormir com a mamã. O sítio mais seguro do mundo.",
+        },
+      },
+      {
+        id: "c6-h5",
+        x: 67,
+        y: 72,
+        icon: "sparkle",
+        label: "Podes-me dobrar também?",
+        reveal: {
+          type: "photo",
+          src: "https://picsum.photos/seed/dobrar/900/1200",
+          caption: "«Podes-me dobrar também, mamã? Eu porto-me bem.»",
         },
       },
     ],
@@ -375,8 +414,8 @@ export const CHAPTERS: Chapter[] = [
         reveal: {
           type: "message",
           text:
-            "P.S.: também adoro quando me cantas a do «atirei o pau ao gato». " +
-            "Mesmo quando desafinas, mamã. Especialmente quando desafinas.",
+            "P.S.: adoro quando me cantas músicas do Sporting " +
+            "para convencer o papá a vir para baixo ter connosco.",
         },
       },
       {
@@ -389,9 +428,10 @@ export const CHAPTERS: Chapter[] = [
           type: "message",
           text:
             "Vi-te tornar-te mãe com os meus próprios olhos. " +
-            "Foi a coisa mais bonita que vi em toda a vida. Obrigado por seres ela. " +
-            "Obrigado por seres dele. Obrigado por seres minha.",
-          signature: "— teu marido",
+            "Foi a coisa mais bonita que vi em toda a vida. " +
+            "Obrigado por seres ela. Obrigado por seres dele. " +
+            "Obrigado por seres minha.",
+          signature: "— teu Pedro",
         },
       },
       {
@@ -420,8 +460,8 @@ export const FINAL_MESSAGE = {
   title: "Feliz Dia da Mãe, meu amor",
   body:
     "Descobriste tudo. Tal como descobriste, todos os dias, " +
-    "uma maneira nova de seres mãe. Não há um único pedacinho " +
-    "deste livro que não tenha sido escrito por causa de ti. " +
-    "Obrigado por seres o nosso lar.",
-  signature: "— o Pedrinho e o pai",
+    "uma maneira nova de seres mãe. Mereces uma massagem no Egito. " +
+    "Não há um único pedacinho deste livro que não tenha sido escrito " +
+    "por causa de ti. Obrigado por seres o nosso lar.",
+  signature: "— o Pedrinho e o Pedro",
 };
