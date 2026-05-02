@@ -336,7 +336,7 @@ export const CHAPTERS: Chapter[] = [
         label: "Hora de dormir",
         reveal: {
           type: "photo",
-          src: "/api/asset/240549ED-D397-4D27-BD00-94E0F451472B.jpeg",
+          src: "/api/asset/IMG_5810.jpeg",
           caption: "Hora de dormir.",
         },
       },
@@ -372,7 +372,7 @@ export const CHAPTERS: Chapter[] = [
         label: "Hora de dormir com a mamã",
         reveal: {
           type: "photo",
-          src: "/api/asset/IMG_5691.jpeg",
+          src: "/api/asset/IMG_5945.jpeg",
           caption: "O sítio mais seguro do mundo.",
         },
       },
