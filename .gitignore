@@ -40,3 +40,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# app tripnov
+tripnov/node_modules
+tripnov/.next
+tripnov/.env.local
+tripnov/data/db.json

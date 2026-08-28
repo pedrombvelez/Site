@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-areia: #faf7f2;
+  --color-papel: #ffffff;
+  --color-tinta: #1c1a17;
+  --color-tinta-fraca: #6c6660;
+  --color-linha: #e7e1d8;
+  --color-mar: #0f5c57;
+  --color-mar-claro: #e6f0ee;
+  --color-ambar: #b4761f;
+  --color-ambar-claro: #fbf1e0;
+  --color-vinho: #8d2f3f;
+  --color-vinho-claro: #f8e9eb;
+
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-areia);
+  color: var(--color-tinta);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Um único estilo de campo para toda a aplicação. */
+.campo {
+  width: 100%;
+  border: 1px solid var(--color-linha);
+  border-radius: 0.5rem;
+  background: var(--color-papel);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.campo:focus {
+  outline: 2px solid var(--color-mar);
+  outline-offset: -1px;
+  border-color: transparent;
+}
+
+.etiqueta {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-tinta-fraca);
+  margin-bottom: 0.3rem;
+}
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--color-mar);
+  color: white;
+  transition: opacity 0.15s;
+}
+.botao:hover {
+  opacity: 0.88;
+}
+.botao-fantasma {
+  background: transparent;
+  color: var(--color-tinta);
+  border: 1px solid var(--color-linha);
+}
+.botao-fantasma:hover {
+  background: var(--color-papel);
+  opacity: 1;
+}
+
+.cartao {
+  background: var(--color-papel);
+  border: 1px solid var(--color-linha);
+  border-radius: 0.75rem;
+}
